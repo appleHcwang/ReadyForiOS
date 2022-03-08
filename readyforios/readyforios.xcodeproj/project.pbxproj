@@ -113,9 +113,9 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
+				B381354027D7AB8E000A0C7D /* 内存管理 */,
 				84D94FD527D5ABBD00757059 /* GCD */,
 				84A1AB8427A131F3005B34E2 /* Runtime */,
-				84A1AB8327A131E3005B34E2 /* 内存管理 */,
 				84A1AB4E27A13121005B34E2 /* AppDelegate.h */,
 				84A1AB4F27A13121005B34E2 /* AppDelegate.m */,
 				84A1AB5127A13121005B34E2 /* SceneDelegate.h */,
@@ -151,13 +151,6 @@
 			path = readyforiosUITests;
 			sourceTree = "<group>";
 		};
-		84A1AB8327A131E3005B34E2 /* 内存管理 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "内存管理";
-			sourceTree = "<group>";
-		};
 		84A1AB8427A131F3005B34E2 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +175,13 @@
 				84D94FD727D5ABF100757059 /* GCDViewController.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		B381354027D7AB8E000A0C7D /* 内存管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "内存管理";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "readyforios" */;
+			buildConfigurationList = 84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "ReadyForiOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -601,7 +601,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "readyforios" */ = {
+		84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "ReadyForiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84A1AB7827A13124005B34E2 /* Debug */,
