@@ -44,12 +44,12 @@
     yellowV.frame = CGRectMake(50, 50, 50, 50);
     yellowV.backgroundColor = [UIColor yellowColor];
     [testV addSubview:yellowV];
-    [self testdfd];
+    [self testdfdd];
         
     
 }
 
--(void)testdfd {
+-(void)testdfdd {
         dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
           dispatch_group_t group = dispatch_group_create();
           dispatch_group_async(group, dispatch_queue_create("com.dispatch.test", DISPATCH_QUEUE_CONCURRENT), ^{
