@@ -1,2 +1,4 @@
 # ReadyForiOS
 ios
+ios
+iOS
