@@ -56,7 +56,7 @@
               NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
               NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                   // 请求完成，可以通知界面刷新界面等操作
-                  NSLog(@"第一步网络请求完成");
+                  NSLog(@"第一步网络请求完成完成");
                   // 使信号的信号量+1，这里的信号量本来为0，+1信号量为1(绿灯)
                   dispatch_semaphore_signal(semaphore);
               }];
