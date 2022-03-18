@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
+		843C4D6527E45C760091D3EE /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6427E45C760091D3EE /* SwiftViewController.swift */; };
 		8457A62327A2921A00CC7C4C /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457A62227A2921A00CC7C4C /* TestView.m */; };
+		84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84987D3827D8868100F28A60 /* RunloopViewController.m */; };
+		84987D3B27D886CA00F28A60 /* Runloop in Resources */ = {isa = PBXBuildFile; fileRef = 84987D3A27D886CA00F28A60 /* Runloop */; };
 		84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB4F27A13121005B34E2 /* AppDelegate.m */; };
 		84A1AB5327A13121005B34E2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB5227A13121005B34E2 /* SceneDelegate.m */; };
 		84A1AB5627A13121005B34E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB5527A13121005B34E2 /* ViewController.m */; };
@@ -39,8 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "readyforios-Bridging-Header.h"; sourceTree = "<group>"; };
+		843C4D6227E433150091D3EE /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
+		843C4D6427E45C760091D3EE /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		8457A62127A2921A00CC7C4C /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		8457A62227A2921A00CC7C4C /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		84987D3727D8868100F28A60 /* RunloopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopViewController.h; sourceTree = "<group>"; };
+		84987D3827D8868100F28A60 /* RunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopViewController.m; sourceTree = "<group>"; };
+		84987D3A27D886CA00F28A60 /* Runloop */ = {isa = PBXFileReference; lastKnownFileType = text; path = Runloop; sourceTree = "<group>"; };
 		84A1AB4B27A13121005B34E2 /* readyforios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = readyforios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1AB4E27A13121005B34E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84A1AB4F27A13121005B34E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +100,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843C4D6027E432E80091D3EE /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				843C4D6227E433150091D3EE /* TestSwift.swift */,
+				843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		84987D3627D8866E00F28A60 /* Runloop */ = {
+			isa = PBXGroup;
+			children = (
+				84987D3727D8868100F28A60 /* RunloopViewController.h */,
+				84987D3827D8868100F28A60 /* RunloopViewController.m */,
+				84987D3A27D886CA00F28A60 /* Runloop */,
+			);
+			path = Runloop;
+			sourceTree = "<group>";
+		};
 		84A1AB4227A13121005B34E2 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +142,8 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
-				B381354127D7ADCA000A0C7D /* Runloop */,
-				B381354027D7AB8E000A0C7D /* 内存管理 */,
+				843C4D6027E432E80091D3EE /* Swift */,
+				84987D3627D8866E00F28A60 /* Runloop */,
 				84D94FD527D5ABBD00757059 /* GCD */,
 				84A1AB8427A131F3005B34E2 /* Runtime */,
 				84A1AB4E27A13121005B34E2 /* AppDelegate.h */,
@@ -123,6 +152,7 @@
 				84A1AB5227A13121005B34E2 /* SceneDelegate.m */,
 				84A1AB5427A13121005B34E2 /* ViewController.h */,
 				84A1AB5527A13121005B34E2 /* ViewController.m */,
+				843C4D6427E45C760091D3EE /* SwiftViewController.swift */,
 				8457A62127A2921A00CC7C4C /* TestView.h */,
 				8457A62227A2921A00CC7C4C /* TestView.m */,
 				84A1AB5727A13121005B34E2 /* Main.storyboard */,
@@ -176,20 +206,6 @@
 				84D94FD727D5ABF100757059 /* GCDViewController.m */,
 			);
 			path = GCD;
-			sourceTree = "<group>";
-		};
-		B381354027D7AB8E000A0C7D /* 内存管理 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "内存管理";
-			sourceTree = "<group>";
-		};
-		B381354127D7ADCA000A0C7D /* Runloop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Runloop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +274,7 @@
 				TargetAttributes = {
 					84A1AB4A27A13121005B34E2 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1320;
 					};
 					84A1AB6527A13124005B34E2 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -269,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "ReadyForiOS" */;
+			buildConfigurationList = 84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "readyforios" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -296,6 +313,7 @@
 			files = (
 				84A1AB5E27A13123005B34E2 /* LaunchScreen.storyboard in Resources */,
 				84A1AB5B27A13123005B34E2 /* Assets.xcassets in Resources */,
+				84987D3B27D886CA00F28A60 /* Runloop in Resources */,
 				84A1AB5927A13121005B34E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,12 +339,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */,
 				84A1AB5627A13121005B34E2 /* ViewController.m in Sources */,
 				84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */,
 				84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */,
 				84A1AB6127A13123005B34E2 /* main.m in Sources */,
 				84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */,
+				843C4D6327E433150091D3EE /* TestSwift.swift in Sources */,
 				8457A62327A2921A00CC7C4C /* TestView.m in Sources */,
+				843C4D6527E45C760091D3EE /* SwiftViewController.swift in Sources */,
 				84A1AB5327A13121005B34E2 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
 				INFOPLIST_FILE = readyforios/Info.plist;
@@ -508,6 +530,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iflyMedical.readyforios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "readyforios/Swift/readyforios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -517,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
 				INFOPLIST_FILE = readyforios/Info.plist;
@@ -526,6 +552,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iflyMedical.readyforios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "readyforios/Swift/readyforios-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -533,6 +561,7 @@
 		84A1AB7E27A13124005B34E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
@@ -553,6 +582,7 @@
 		84A1AB7F27A13124005B34E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
@@ -573,6 +603,7 @@
 		84A1AB8127A13124005B34E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
 				INFOPLIST_FILE = readyforiosUITests/Info.plist;
@@ -591,6 +622,7 @@
 		84A1AB8227A13124005B34E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
 				INFOPLIST_FILE = readyforiosUITests/Info.plist;
@@ -609,7 +641,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "ReadyForiOS" */ = {
+		84A1AB4627A13121005B34E2 /* Build configuration list for PBXProject "readyforios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84A1AB7827A13124005B34E2 /* Debug */,

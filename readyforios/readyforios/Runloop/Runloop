@@ -1,0 +1,16 @@
+
+Runloop相关知识点
+一.runloop和线程的关系
+1.一个线程对应一个Runloop
+2.主线程默认就有Runloop,默认创建
+3.子线程的Runloop是以懒加载的形式创建
+4.Runloop 存储在一个全局可变的字典里, 线程是key Runloop是value
+
+二.runLoop mode (一共有5个 Mode)
+1. kCFRunLoopDefaultMode, App的默认运行模式，通常主线程是在这个运行模式下运行
+2. UITrackingRunLoopMode, 跟踪用户交互事件（用于 ScrollView 追踪触摸滑动，保证界面滑动时不受其他Mode影响）
+3. kCFRunLoopCommonModes, 伪模式，不是一种真正的运行模式
+4. UIInitializationRunLoopMode：在刚启动App时第进入的第一个Mode，启动完成后就不再使用
+5. GSEventReceiveRunLoopMode：接受系统内部事件，通常用不到
+
+

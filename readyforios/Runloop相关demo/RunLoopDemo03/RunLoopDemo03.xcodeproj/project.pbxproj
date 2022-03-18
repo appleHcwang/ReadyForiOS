@@ -130,6 +130,7 @@
 				TargetAttributes = {
 					B9733A621E0117C500E89F5D = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = EH5L6T78SH;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +140,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EH5L6T78SH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RunLoopDemo03/Vendor",
@@ -307,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EH5L6T78SH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RunLoopDemo03/Vendor",

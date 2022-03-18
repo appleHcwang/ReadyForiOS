@@ -11,81 +11,95 @@
 
 #import "TestView.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     
 }
 @property (nonatomic,strong) TestMessage* test;
-
+@property (nonatomic,strong) UITableView * tableView;
+@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"fsfs";
+    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"22",@"33",nil];
     /******类方法调用******/
 //    [[TestMessage class] performSelector:@selector(testClassFunction)];
 //    CALayer *aa = [[CALayer alloc] init];
     // Do any additional setup after loading the view.
     
-    TestView * testV = [[TestView alloc] init];
-    testV.frame = CGRectMake(100, 100, 200, 200);
-    testV.backgroundColor = [UIColor redColor];
-    [self.view addSubview:testV];
-    
-    
-    UIView * greenV = [[UIView alloc] init];
-    greenV.frame = CGRectMake(0, 0, 50, 50);
-    greenV.backgroundColor = [UIColor greenColor];
-    [testV addSubview:greenV];
-    
-    
-    UIView * yellowV = [[UIView alloc] init];
-    yellowV.frame = CGRectMake(50, 50, 50, 50);
-    yellowV.backgroundColor = [UIColor yellowColor];
-    [testV addSubview:yellowV];
-    [self testdfdd];
-        
-    
+//    TestView * testV = [[TestView alloc] init];
+//    testV.frame = CGRectMake(100, 100, 200, 200);
+//    testV.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:testV];
+//
+//
+//    UIView * greenV = [[UIView alloc] init];
+//    greenV.frame = CGRectMake(0, 0, 50, 50);
+//    greenV.backgroundColor = [UIColor greenColor];
+//    [testV addSubview:greenV];
+//
+//    UIView * yellowV = [[UIView alloc] init];
+//    yellowV.frame = CGRectMake(50, 50, 50, 50);
+//    yellowV.backgroundColor = [UIColor yellowColor];
+//    [testV addSubview:yellowV];
+//
+    [self creatTableView];
 }
 
--(void)testdfdd {
-        dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
-          dispatch_group_t group = dispatch_group_create();
-          dispatch_group_async(group, dispatch_queue_create("com.dispatch.test", DISPATCH_QUEUE_CONCURRENT), ^{
-              NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
-              NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                  // 请求完成，可以通知界面刷新界面等操作
-                  NSLog(@"第一步网络请求完成完成");
-                  // 使信号的信号量+1，这里的信号量本来为0，+1信号量为1(绿灯)
-                  dispatch_semaphore_signal(semaphore);
-              }];
-              [task resume];
-              // 以下还要进行一些其他的耗时操作
-              NSLog(@"耗时操作继续进行");
-              dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-          });
+- (void)creatTableView {
     
-    
-          dispatch_group_async(group, dispatch_queue_create("com.dispatch.test", DISPATCH_QUEUE_CONCURRENT), ^{
-              NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.github.com"]];
-              NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                  // 请求完成，可以通知界面刷新界面等操作
-                  NSLog(@"第二步网络请求完成");
-                  // 使信号的信号量+1，这里的信号量本来为0，+1信号量为1(绿灯)
-                  dispatch_semaphore_signal(semaphore);
-              }];
-              [task resume];
-              // 以下还要进行一些其他的耗时操作
-              NSLog(@"耗时操作继续进行");
-              dispatch_semaphore_wait(semaphore,DISPATCH_TIME_FOREVER);
-          });
-          
-    
-          dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-              NSLog(@"刷新界面等在主线程的操作");
-          });
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
 }
+
+#pragma mark - Table view data source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  
+    return self.dataArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *identifierString = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierString];
+    if (cell==nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierString];
+    }
+ 
+    cell.textLabel.text = self.dataArray[indexPath.row];
+
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.navigationController pushViewController:[[NSClassFromString(self.dataArray[indexPath.row]) alloc] init] animated:YES];
+ 
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 70;
+}
+
+
+ 
 
 
  
