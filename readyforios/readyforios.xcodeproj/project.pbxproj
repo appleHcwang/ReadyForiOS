@@ -71,6 +71,8 @@
 		84A1AB7727A13124005B34E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A1AB8627A13337005B34E2 /* TestMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMessage.h; sourceTree = "<group>"; };
 		84A1AB8727A13337005B34E2 /* TestMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMessage.m; sourceTree = "<group>"; };
+		84C9077D27EACAF4006DC125 /* SwiftREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftREADME.md; sourceTree = "<group>"; };
+		84C9078427EAFA15006DC125 /* RuntimeREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RuntimeREADME.md; sourceTree = "<group>"; };
 		84D94FD627D5ABF100757059 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		84D94FD727D5ABF100757059 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 			children = (
 				843C4D6227E433150091D3EE /* TestSwift.swift */,
 				843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */,
+				84C9077D27EACAF4006DC125 /* SwiftREADME.md */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				84A1AB8527A1331F005B34E2 /* 消息解析过程 */,
+				84C9078427EAFA15006DC125 /* RuntimeREADME.md */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
