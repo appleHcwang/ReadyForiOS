@@ -22,6 +22,7 @@
 		84A1AB6B27A13124005B34E2 /* readyforiosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB6A27A13124005B34E2 /* readyforiosTests.m */; };
 		84A1AB7627A13124005B34E2 /* readyforiosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB7527A13124005B34E2 /* readyforiosUITests.m */; };
 		84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB8727A13337005B34E2 /* TestMessage.m */; };
+		84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */; };
 		84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94FD727D5ABF100757059 /* GCDViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841DA1FF27EC5DFF00305FFD /* BlockREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BlockREADME.md; sourceTree = "<group>"; };
 		843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "readyforios-Bridging-Header.h"; sourceTree = "<group>"; };
 		843C4D6227E433150091D3EE /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
 		843C4D6427E45C760091D3EE /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,9 @@
 		84A1AB7727A13124005B34E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A1AB8627A13337005B34E2 /* TestMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMessage.h; sourceTree = "<group>"; };
 		84A1AB8727A13337005B34E2 /* TestMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMessage.m; sourceTree = "<group>"; };
+		84B845EF27F1A2D400D4BEE7 /* RuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
+		84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
+		84B845F427F1B26800D4BEE7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84C9077D27EACAF4006DC125 /* SwiftREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftREADME.md; sourceTree = "<group>"; };
 		84C9078427EAFA15006DC125 /* RuntimeREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RuntimeREADME.md; sourceTree = "<group>"; };
 		84D94FD627D5ABF100757059 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
@@ -102,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841DA1FE27EC5DD900305FFD /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				841DA1FF27EC5DFF00305FFD /* BlockREADME.md */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 		843C4D6027E432E80091D3EE /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,9 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
+				84B845F327F1B23C00D4BEE7 /* Git */,
+				84B845F227F1AFE100D4BEE7 /* LLVM */,
+				841DA1FE27EC5DD900305FFD /* Block */,
 				843C4D6027E432E80091D3EE /* Swift */,
 				84987D3627D8866E00F28A60 /* Runloop */,
 				84D94FD527D5ABBD00757059 /* GCD */,
@@ -190,6 +206,8 @@
 			children = (
 				84A1AB8527A1331F005B34E2 /* 消息解析过程 */,
 				84C9078427EAFA15006DC125 /* RuntimeREADME.md */,
+				84B845EF27F1A2D400D4BEE7 /* RuntimeViewController.h */,
+				84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -201,6 +219,21 @@
 				84A1AB8727A13337005B34E2 /* TestMessage.m */,
 			);
 			path = "消息解析过程";
+			sourceTree = "<group>";
+		};
+		84B845F227F1AFE100D4BEE7 /* LLVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LLVM;
+			sourceTree = "<group>";
+		};
+		84B845F327F1B23C00D4BEE7 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				84B845F427F1B26800D4BEE7 /* README.md */,
+			);
+			path = Git;
 			sourceTree = "<group>";
 		};
 		84D94FD527D5ABBD00757059 /* GCD */ = {
@@ -346,6 +379,7 @@
 				84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */,
 				84A1AB5627A13121005B34E2 /* ViewController.m in Sources */,
 				84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */,
+				84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */,
 				84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */,
 				84A1AB6127A13123005B34E2 /* main.m in Sources */,
 				84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */,

@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"fsfs";
-    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"22",@"33",nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"33",nil];
     /******类方法调用******/
 //    [[TestMessage class] performSelector:@selector(testClassFunction)];
 //    CALayer *aa = [[CALayer alloc] init];
