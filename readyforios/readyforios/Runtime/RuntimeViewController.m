@@ -20,7 +20,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"runtime";
     
-    
+    BOOL re1 = [(id)[NSObject class] isKindOfClass:[NSObject class]];
+    BOOL re2 = [(id)[[NSObject alloc] init]  isMemberOfClass:[NSObject class]];
+ 
+    NSLog(@" re1 :%hhd\n re2 :%hhd\n re3 :%hhd\n re4 :%hhd\n",re1,re2);
+
+}
+
+
+-(void)rootClass {
     Person *p           = [Person new];
     Class  class1       = object_getClass(p); // 获取p ---> 类对象
     Class  class2       = [p class];  // 获取p ---> 类对象

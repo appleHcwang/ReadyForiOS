@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84360FE227F4487C00A73792 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84360FE127F4487C00A73792 /* KVOViewController.m */; };
 		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
 		843C4D6527E45C760091D3EE /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6427E45C760091D3EE /* SwiftViewController.swift */; };
 		8457A62327A2921A00CC7C4C /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457A62227A2921A00CC7C4C /* TestView.m */; };
@@ -44,7 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841C8FD727F2ABA30081CB63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		841DA1FF27EC5DFF00305FFD /* BlockREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BlockREADME.md; sourceTree = "<group>"; };
+		84360FE027F4487C00A73792 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		84360FE127F4487C00A73792 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "readyforios-Bridging-Header.h"; sourceTree = "<group>"; };
 		843C4D6227E433150091D3EE /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
 		843C4D6427E45C760091D3EE /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841C8FD627F2A9470081CB63 /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				841C8FD727F2ABA30081CB63 /* README.md */,
+				84360FE027F4487C00A73792 /* KVOViewController.h */,
+				84360FE127F4487C00A73792 /* KVOViewController.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
 		841DA1FE27EC5DD900305FFD /* Block */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +172,7 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
+				841C8FD627F2A9470081CB63 /* KVO */,
 				84B845F327F1B23C00D4BEE7 /* Git */,
 				84B845F227F1AFE100D4BEE7 /* LLVM */,
 				841DA1FE27EC5DD900305FFD /* Block */,
@@ -381,6 +396,7 @@
 				84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */,
 				84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */,
 				84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */,
+				84360FE227F4487C00A73792 /* KVOViewController.m in Sources */,
 				84A1AB6127A13123005B34E2 /* main.m in Sources */,
 				84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */,
 				843C4D6327E433150091D3EE /* TestSwift.swift in Sources */,
