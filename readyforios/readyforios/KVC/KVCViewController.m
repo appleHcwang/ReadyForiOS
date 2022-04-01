@@ -5,6 +5,7 @@
 //  Created by hcwang3 on 2022/3/31.
 //
 
+
 #import "KVCViewController.h"
 
 
@@ -110,19 +111,34 @@
      2022-03-31 19:57:32.142998+0800 readyforios[98301:7389001] name = nameValue,  jeName = jeNameValue  age = 4
      */
     NSLog(@"name = %@, %@ age = %@",p.name,[p valueForKey:@"jeName"],@(p.age));
-    
+
+    max(100, 100);
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+ 
+int max (int num1, int num2) {
+    int result;
+    
+    if (num1 > num2) result = num1;
+    else result = num2;
+    
+    struct person {
+        int age;
+    } ;
+    
+   struct person p ;
+    p.age = 10;
+    
+    typedef  struct student {
+        int age;
+    } stu;
+    stu s ;
+    s.age = 11;
+   
+    
+    return result;
 }
-*/
 
 @end
 
