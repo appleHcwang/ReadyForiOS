@@ -11,6 +11,7 @@
 		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
 		843C4D6527E45C760091D3EE /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6427E45C760091D3EE /* SwiftViewController.swift */; };
 		8457A62327A2921A00CC7C4C /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457A62227A2921A00CC7C4C /* TestView.m */; };
+		848088C327F5C1B900C052DC /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848088C227F5C1B900C052DC /* KVCViewController.m */; };
 		84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84987D3827D8868100F28A60 /* RunloopViewController.m */; };
 		84987D3B27D886CA00F28A60 /* Runloop in Resources */ = {isa = PBXBuildFile; fileRef = 84987D3A27D886CA00F28A60 /* Runloop */; };
 		84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1AB4F27A13121005B34E2 /* AppDelegate.m */; };
@@ -54,6 +55,9 @@
 		843C4D6427E45C760091D3EE /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		8457A62127A2921A00CC7C4C /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		8457A62227A2921A00CC7C4C /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		848088C127F5C1B900C052DC /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
+		848088C227F5C1B900C052DC /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
+		848088C427F5C1CE00C052DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84987D3727D8868100F28A60 /* RunloopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopViewController.h; sourceTree = "<group>"; };
 		84987D3827D8868100F28A60 /* RunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopViewController.m; sourceTree = "<group>"; };
 		84987D3A27D886CA00F28A60 /* Runloop */ = {isa = PBXFileReference; lastKnownFileType = text; path = Runloop; sourceTree = "<group>"; };
@@ -139,6 +143,16 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		848088C027F5C19A00C052DC /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				848088C427F5C1CE00C052DC /* README.md */,
+				848088C127F5C1B900C052DC /* KVCViewController.h */,
+				848088C227F5C1B900C052DC /* KVCViewController.m */,
+			);
+			path = KVC;
+			sourceTree = "<group>";
+		};
 		84987D3627D8866E00F28A60 /* Runloop */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +186,7 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
+				848088C027F5C19A00C052DC /* KVC */,
 				841C8FD627F2A9470081CB63 /* KVO */,
 				84B845F327F1B23C00D4BEE7 /* Git */,
 				84B845F227F1AFE100D4BEE7 /* LLVM */,
@@ -392,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */,
+				848088C327F5C1B900C052DC /* KVCViewController.m in Sources */,
 				84A1AB5627A13121005B34E2 /* ViewController.m in Sources */,
 				84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */,
 				84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */,

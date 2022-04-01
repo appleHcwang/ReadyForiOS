@@ -6,6 +6,8 @@
 //
 
 #import "KVOViewController.h"
+
+#import <objc/runtime.h>
 @interface KVOViewController ()
 {
     
@@ -21,6 +23,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"KVO";
     _car = [[Car alloc] init];
+    
+    Car *car1 = [[Car alloc] init];
+    
+    
     _car.train = [Train new];
     // 注册 self 也就是 controller 为自己的观察者
 //    [_car addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
@@ -30,6 +36,41 @@
     //多属性
     [_car addObserver:self forKeyPath:@"firstName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     [_car addObserver:self forKeyPath:@"lastName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    
+    NSLog(@"%@,%@",[car1 class],object_getClass(_car));
+    [self printMethods:object_getClass([Car new])];
+    
+    [self printMethods:object_getClass(_car)];
+}
+
+
+- (void) printMethods:(Class)cls
+{
+    unsigned int count ;
+    Method *methods = class_copyMethodList(cls, &count);
+    NSMutableString *methodNames = [NSMutableString string];
+    [methodNames appendFormat:@"%@ - ", cls];
+    
+    for (int i = 0 ; i < count; i++) {
+        Method method = methods[i];
+        NSString *methodName  = NSStringFromSelector(method_getName(method));
+        
+        [methodNames appendString: methodName];
+        [methodNames appendString:@" "];
+    }
+    
+    NSLog(@"%@",methodNames);
+    
+    /*
+     之前类的
+     2022-03-31 19:23:08.633111+0800 readyforios[97863:7376219] Car - name setName: firstName setFirstName: lastName setLastName: train setTrain: .cxx_destruct
+    添加监听之后类的打印情况
+     2022-03-31 19:23:08.633244+0800 readyforios[97863:7376219] NSKVONotifying_Car - setLastName: setFirstName: class dealloc _isKVOA
+     
+     
+     */
+    
+    free(methods);
 }
 
 
