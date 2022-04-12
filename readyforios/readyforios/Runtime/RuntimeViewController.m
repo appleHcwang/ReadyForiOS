@@ -24,7 +24,7 @@
     BOOL re2 = [(id)[[NSObject alloc] init]  isMemberOfClass:[NSObject class]];
  
     NSLog(@" re1 :%hhd\n re2 :%hhd\n re3 :%hhd\n re4 :%hhd\n",re1,re2);
-
+    [self rootClass];
 }
 
 
