@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 
 #import "TestView.h"
+#import "readyforios-Swift.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -25,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"fsfs";
-    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.SwiftViewController",nil];
     /******类方法调用******/
 //    [[TestMessage class] performSelector:@selector(testClassFunction)];
 //    CALayer *aa = [[CALayer alloc] init];
@@ -89,6 +90,10 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    Class aa =  NSClassFromString(self.dataArray[indexPath.row]);
+    
+ 
     [self.navigationController pushViewController:[[NSClassFromString(self.dataArray[indexPath.row]) alloc] init] animated:YES];
  
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		84360FE227F4487C00A73792 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84360FE127F4487C00A73792 /* KVOViewController.m */; };
 		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
-		843C4D6527E45C760091D3EE /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6427E45C760091D3EE /* SwiftViewController.swift */; };
+		8447E2232806A7AF009D9B55 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E2222806A7AF009D9B55 /* SwiftViewController.swift */; };
 		8457A62327A2921A00CC7C4C /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457A62227A2921A00CC7C4C /* TestView.m */; };
 		848088C327F5C1B900C052DC /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848088C227F5C1B900C052DC /* KVCViewController.m */; };
 		84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84987D3827D8868100F28A60 /* RunloopViewController.m */; };
@@ -52,7 +52,7 @@
 		84360FE127F4487C00A73792 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "readyforios-Bridging-Header.h"; sourceTree = "<group>"; };
 		843C4D6227E433150091D3EE /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
-		843C4D6427E45C760091D3EE /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		8447E2222806A7AF009D9B55 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		8457A62127A2921A00CC7C4C /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		8457A62227A2921A00CC7C4C /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		848088C127F5C1B900C052DC /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
@@ -137,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				843C4D6227E433150091D3EE /* TestSwift.swift */,
+				8447E2222806A7AF009D9B55 /* SwiftViewController.swift */,
 				843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */,
 				84C9077D27EACAF4006DC125 /* SwiftREADME.md */,
 			);
@@ -201,7 +202,6 @@
 				84A1AB5227A13121005B34E2 /* SceneDelegate.m */,
 				84A1AB5427A13121005B34E2 /* ViewController.h */,
 				84A1AB5527A13121005B34E2 /* ViewController.m */,
-				843C4D6427E45C760091D3EE /* SwiftViewController.swift */,
 				8457A62127A2921A00CC7C4C /* TestView.h */,
 				8457A62227A2921A00CC7C4C /* TestView.m */,
 				84A1AB5727A13121005B34E2 /* Main.storyboard */,
@@ -412,12 +412,12 @@
 				84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */,
 				84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */,
 				84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */,
+				8447E2232806A7AF009D9B55 /* SwiftViewController.swift in Sources */,
 				84360FE227F4487C00A73792 /* KVOViewController.m in Sources */,
 				84A1AB6127A13123005B34E2 /* main.m in Sources */,
 				84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */,
 				843C4D6327E433150091D3EE /* TestSwift.swift in Sources */,
 				8457A62327A2921A00CC7C4C /* TestView.m in Sources */,
-				843C4D6527E45C760091D3EE /* SwiftViewController.swift in Sources */,
 				84A1AB5327A13121005B34E2 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

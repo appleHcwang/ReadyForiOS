@@ -10,3 +10,9 @@
      xcode默认生成了用于OC调用swift的头文件Test(项目名)-Swift.h，在oc类中#import引用即可
 
 2、dynamic 在swift与OC中的作用
+
+
+3.解析OC与Swift混编时获取swift类名的坑
+如果swift类继承自NSObject的类及其子类，返回的类名：项目工程名.声明的名称
+如果swift类未继承NSObject，返回的是类名是：声明的名称
+OC类不管在swift还是OC环境中，返回的类名始终是：声明的名称
