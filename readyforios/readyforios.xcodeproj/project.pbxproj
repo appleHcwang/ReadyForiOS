@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		84360FE227F4487C00A73792 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84360FE127F4487C00A73792 /* KVOViewController.m */; };
 		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
+		843C6DF4280D08C600A8614E /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C6DF3280D08C600A8614E /* BlockViewController.m */; };
 		8447E2232806A7AF009D9B55 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E2222806A7AF009D9B55 /* SwiftViewController.swift */; };
 		8457A62327A2921A00CC7C4C /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457A62227A2921A00CC7C4C /* TestView.m */; };
+		84645547280D5C0500E7D248 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84645546280D5C0500E7D248 /* TestClass.m */; };
 		848088C327F5C1B900C052DC /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848088C227F5C1B900C052DC /* KVCViewController.m */; };
 		84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84987D3827D8868100F28A60 /* RunloopViewController.m */; };
 		84987D3B27D886CA00F28A60 /* Runloop in Resources */ = {isa = PBXBuildFile; fileRef = 84987D3A27D886CA00F28A60 /* Runloop */; };
@@ -52,9 +54,13 @@
 		84360FE127F4487C00A73792 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "readyforios-Bridging-Header.h"; sourceTree = "<group>"; };
 		843C4D6227E433150091D3EE /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
+		843C6DF2280D08C600A8614E /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		843C6DF3280D08C600A8614E /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		8447E2222806A7AF009D9B55 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		8457A62127A2921A00CC7C4C /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		8457A62227A2921A00CC7C4C /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		84645545280D5C0500E7D248 /* TestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		84645546280D5C0500E7D248 /* TestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		848088C127F5C1B900C052DC /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
 		848088C227F5C1B900C052DC /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		848088C427F5C1CE00C052DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -129,6 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				841DA1FF27EC5DFF00305FFD /* BlockREADME.md */,
+				843C6DF2280D08C600A8614E /* BlockViewController.h */,
+				843C6DF3280D08C600A8614E /* BlockViewController.m */,
+				84645545280D5C0500E7D248 /* TestClass.h */,
+				84645546280D5C0500E7D248 /* TestClass.m */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -406,10 +416,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84645547280D5C0500E7D248 /* TestClass.m in Sources */,
 				84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */,
 				848088C327F5C1B900C052DC /* KVCViewController.m in Sources */,
 				84A1AB5627A13121005B34E2 /* ViewController.m in Sources */,
 				84A1AB8827A13337005B34E2 /* TestMessage.m in Sources */,
+				843C6DF4280D08C600A8614E /* BlockViewController.m in Sources */,
 				84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */,
 				84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */,
 				8447E2232806A7AF009D9B55 /* SwiftViewController.swift in Sources */,
