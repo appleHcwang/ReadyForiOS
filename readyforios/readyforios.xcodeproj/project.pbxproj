@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3781862DB93BF3BA01105539 /* Pods_readyforios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E26CD2696AA9404A47A27A /* Pods_readyforios.framework */; };
 		84360FE227F4487C00A73792 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84360FE127F4487C00A73792 /* KVOViewController.m */; };
 		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
 		843C6DF4280D08C600A8614E /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C6DF3280D08C600A8614E /* BlockViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		208914C7CC249B1905DB14E2 /* Pods-readyforios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-readyforios.debug.xcconfig"; path = "Target Support Files/Pods-readyforios/Pods-readyforios.debug.xcconfig"; sourceTree = "<group>"; };
+		54E26CD2696AA9404A47A27A /* Pods_readyforios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_readyforios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841C8FD727F2ABA30081CB63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		841DA1FF27EC5DFF00305FFD /* BlockREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BlockREADME.md; sourceTree = "<group>"; };
 		84360FE027F4487C00A73792 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		84C9078427EAFA15006DC125 /* RuntimeREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RuntimeREADME.md; sourceTree = "<group>"; };
 		84D94FD627D5ABF100757059 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		84D94FD727D5ABF100757059 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		CBAF95B272F59ADF0E8FAB01 /* Pods-readyforios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-readyforios.release.xcconfig"; path = "Target Support Files/Pods-readyforios/Pods-readyforios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3781862DB93BF3BA01105539 /* Pods_readyforios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		283B621F900740BED0E38670 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				208914C7CC249B1905DB14E2 /* Pods-readyforios.debug.xcconfig */,
+				CBAF95B272F59ADF0E8FAB01 /* Pods-readyforios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		841C8FD627F2A9470081CB63 /* KVO */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +195,8 @@
 				84A1AB6927A13124005B34E2 /* readyforiosTests */,
 				84A1AB7427A13124005B34E2 /* readyforiosUITests */,
 				84A1AB4C27A13121005B34E2 /* Products */,
+				283B621F900740BED0E38670 /* Pods */,
+				F963190A75CD84A56284B8ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +301,14 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		F963190A75CD84A56284B8ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54E26CD2696AA9404A47A27A /* Pods_readyforios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,9 +316,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A1AB7A27A13124005B34E2 /* Build configuration list for PBXNativeTarget "readyforios" */;
 			buildPhases = (
+				1DA4ACD0A149BF9729FB9540 /* [CP] Check Pods Manifest.lock */,
 				84A1AB4727A13121005B34E2 /* Sources */,
 				84A1AB4827A13121005B34E2 /* Frameworks */,
 				84A1AB4927A13121005B34E2 /* Resources */,
+				3152CD6CE2909D752E2CDFF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,6 +436,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DA4ACD0A149BF9729FB9540 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-readyforios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3152CD6CE2909D752E2CDFF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-readyforios/Pods-readyforios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-readyforios/Pods-readyforios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-readyforios/Pods-readyforios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84A1AB4727A13121005B34E2 /* Sources */ = {
@@ -599,6 +667,7 @@
 		};
 		84A1AB7B27A13124005B34E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 208914C7CC249B1905DB14E2 /* Pods-readyforios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -621,6 +690,7 @@
 		};
 		84A1AB7C27A13124005B34E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBAF95B272F59ADF0E8FAB01 /* Pods-readyforios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

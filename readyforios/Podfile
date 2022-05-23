@@ -1,0 +1,23 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target ’readyforios’ do
+  pod 'Masonry', '~> 1.0.1'
+  pod 'MJExtension', '~> 3.0.10'
+  pod 'MBProgressHUD'
+  pod 'ObjectMapper', '~> 3.5'
+  pod 'AFNetworking'
+  pod 'SnapKit'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Moya/RxSwift'    # 用于网络请求
+  pod 'Kingfisher'      # SDWebImage swift 版
+  pod 'RxDataSources', '~> 3.0'  # RxSwift中用于设置UITableView/UICollectionView data sources
+  pod 'ZKProgressHUD'
+  pod 'JDStatusBarNotification'
+  pod 'KakaJSON', '~> 1.1.2' 
+end
+

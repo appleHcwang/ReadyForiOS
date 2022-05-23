@@ -61,6 +61,9 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
+    
+    NSArray * a = [NSArray arrayWithObjects:[SwiftViewController optionalTypeWithA:@"11" b:@"sds"], nil];
+    
 }
 
 #pragma mark - Table view data source

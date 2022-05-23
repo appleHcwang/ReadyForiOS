@@ -16,3 +16,53 @@
 如果swift类继承自NSObject的类及其子类，返回的类名：项目工程名.声明的名称
 如果swift类未继承NSObject，返回的是类名是：声明的名称
 OC类不管在swift还是OC环境中，返回的类名始终是：声明的名称
+
+
+4. 类(class) 和 结构体(struct) 有什么区别?
+在 Swift 中,class 是引用类型(指针类型), struct 是值类型
+
+
+5.var 和 let的使用
+
+var声明的是变量，可以修改值(调用对象的set方法)，举例说明
+let声明的是常量，不可以修改值(不可调用对象的set方法)，举例说明
+ var varA = 42
+ varA = 43
+ print(varA)//输出43 
+ 
+let varC = 36
+ //varC = 46 报错，因为let申明的就是常量，不能修改值
+ print(varC)
+ 
+
+6. ?的使用，如果对象没有赋值，默认为nil，举例说明  ??就是如果对象为nil，则使用后面的值代替，但是原变量不修改
+
+var myString:String
+print(myString)  //报错，因为myString没有赋值
+ 
+var myString:String?
+print(myString)  //输出：nil
+ 
+var myString:String? = "myString"
+ print(myString)  //输出：myString
+ 
+var myString:String?
+var myString1 = myString ?? "BBBB";
+print("myString1:\(myString1)    myString: \(myString)") // 输出：myString1:BBBB    myString: nil
+7.！的使用，如果对象没有赋值，直接使用，会报错，可以使用！
+
+var myString:String!
+print(myString) //输出：nil
+ 
+var myString:String!
+myString = "myString"
+print(myString) //输出：myString
+
+8.？和！的区别，你会发现！和？在没有赋值的情况下打印出来的值都是nil，如果使用？声明的变量不赋值，直接调用对象的方法不执行，
+   而使用！声明的变量不赋值，直接调用对象的方法运行会报错
+
+var btn1: UIButton!
+btn1.frame = CGRect.init(x: 10, y: 10, width: 10, height: 120);//报错
+ 
+var btn1: UIButton?
+btn1?.frame = CGRect.init(x: 10, y: 10, width: 10, height: 120);//没有报错，这里不执行  btn1?这个问号必须加上，不然编译之前就报错了 
