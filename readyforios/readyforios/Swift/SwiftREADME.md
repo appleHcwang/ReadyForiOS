@@ -58,11 +58,36 @@ var myString:String!
 myString = "myString"
 print(myString) //输出：myString
 
-8.？和！的区别，你会发现！和？在没有赋值的情况下打印出来的值都是nil，如果使用？声明的变量不赋值，直接调用对象的方法不执行，
-   而使用！声明的变量不赋值，直接调用对象的方法运行会报错
 
+
+8 .？和！的区别，你会发现！和？在没有赋值的情况下打印出来的值都是nil，
+如果使用？声明的变量不赋值，直接调用对象的方法不执行，
+而使用！声明的变量不赋值，直接调用对象的方法运行会报错
 var btn1: UIButton!
 btn1.frame = CGRect.init(x: 10, y: 10, width: 10, height: 120);//报错
- 
 var btn1: UIButton?
 btn1?.frame = CGRect.init(x: 10, y: 10, width: 10, height: 120);//没有报错，这里不执行  btn1?这个问号必须加上，不然编译之前就报错了 
+问号？
+a.声明时添加？，告诉编译器这个是Optional的，如果声明时没有手动初始化，就自动初始化为nil
+b.在对变量值操作前添加？，判断如果变量时nil，则不响应后面的方法。
+
+叹号！
+a.声明时添加！，告诉编译器这个是Optional的，并且之后对该变量操作的时候，都隐式的在操作前添加！
+b.在对变量操作前添加！，表示默认为非nil，直接解包进行处理
+
+9.set和get的重写
+
+swift和OC很大的一个不同，就是swift并不能和OC一样，直接重写setter和getter，但swift提供了属性监视和计算属性
+
+先说计算属性，swift无法重写getter和setter方法，只能去利用计算属性去操作其他的属性。
+
+结论就是：
+
+willSet是值将要改变时触发，存在一个newValue的变量。didSet是值已经改变触发，存在一个oldValue的变量。
+
+willSet、didSet 和 get、set这两套方法只能二选一，全部实现会报错。所以当想要在get方法里要干事时，就只能用get set方法。而且set方法和willset好像是一样的，都有newValue变量。
+
+所以如果你想在set和get里做一些操作，在swift中，得额外声明一个计算属性，重写它的set和get方法， 然后通过调用计算属性，来达到操作原属性的目的，但直接重写原属性的willSet，看起来更方便
+
+
+

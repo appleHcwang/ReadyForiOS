@@ -26,12 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"fsfs";
-    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.SwiftViewController",@"BlockViewController",nil];
-    /******类方法调用******/
-//    [[TestMessage class] performSelector:@selector(testClassFunction)];
-//    CALayer *aa = [[CALayer alloc] init];
-    // Do any additional setup after loading the view.
+    IFLYCollTypeSelectView * view = [[IFLYCollTypeSelectView alloc] initWithFrame:self.view.bounds];
+    view.dataArr = @[];
+//    [view setDataSourceWithArr:@[@"1",@"2",@"3",@"5"]];
+    [self.view addSubview:view];
     
+    TestSwift *ss = [[TestSwift alloc] init];
+    ss.now = @"fdfd";
+    
+
+//    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.SwiftViewController",@"BlockViewController",@"MemoryManagementViewController",nil];
+//    /******类方法调用******/
+////    [[TestMessage class] performSelector:@selector(testClassFunction)];
+////    CALayer *aa = [[CALayer alloc] init];
+//    // Do any additional setup after loading the view.
+
 //    TestView * testV = [[TestView alloc] init];
 //    testV.frame = CGRectMake(100, 100, 200, 200);
 //    testV.backgroundColor = [UIColor redColor];
@@ -47,8 +56,8 @@
 //    yellowV.frame = CGRectMake(50, 50, 50, 50);
 //    yellowV.backgroundColor = [UIColor yellowColor];
 //    [testV addSubview:yellowV];
-//
-    [self creatTableView];
+////
+//    [self creatTableView];
 }
 
 - (void)creatTableView {
