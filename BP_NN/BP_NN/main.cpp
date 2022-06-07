@@ -10,29 +10,71 @@
 
 using namespace std;
 
+//常量定义
+#define LENGTH 10
+#define NEWLINE "\n"
+
+const int LH = 10;
+
+
 //函数声明
 void dataType();
+void bianLiangSm();
+void jubuQuanJu();
+
+// 变量声明
+extern int a, b;
+//extern int c;
+int g = 20;
+
+
+int countt = 10 ;
+extern void write_extern();
+ 
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    cout << "Hello world";
+    cout << LENGTH << NEWLINE <<LH;
+
+    countt = 5;
+    write_extern();
     
-    Box Box1;        // 声明 Box1，类型为 Box
-    Box Box2;        // 声明 Box2，类型为 Box
-    Box Box3;        // 声明 Box3，类型为 Box
-    double volume = 0.0;     // 用于存储体积
-  
-    // box 1 详述
-    Box1.height = 5.0;
-    Box1.length = 6.0;
-    Box1.breadth = 7.0;
     
-    Box1.set(2.0, 5.0, 7.0);
-  
     
-    dataType();
+     jubuQuanJu();
+//    bianLiangSm();
+//    dataType();
+      
     return 0;
+}
+
+/*
+ *局部变量 和 全局变量
+ */
+
+void jubuQuanJu() {
+    int g = 10;
+    cout << g;
+    
+    
+}
+
+
+/**
+ *变量声明
+ */
+
+void bianLiangSm() {
+    int a,b;
+    int c;
+    a = 10;
+    b = 20;
+    c = a + b;
+    
+    cout <<"\n" << c << "\n" ;
+    
+    
 }
 
 /**
