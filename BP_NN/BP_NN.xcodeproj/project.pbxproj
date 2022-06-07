@@ -64,10 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				B38025CB284E4FB00086EB56 /* main.cpp */,
-				B38025D2284E53EA0086EB56 /* Person.cpp */,
 				B38025D5284E54360086EB56 /* Box.cpp */,
 				B38025D6284E54360086EB56 /* Box.hpp */,
 				B38025D3284E53EA0086EB56 /* Person.hpp */,
+				B38025D2284E53EA0086EB56 /* Person.cpp */,
 			);
 			path = BP_NN;
 			sourceTree = "<group>";

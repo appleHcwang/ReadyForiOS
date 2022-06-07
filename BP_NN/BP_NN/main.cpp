@@ -21,6 +21,9 @@ const int LH = 10;
 void dataType();
 void bianLiangSm();
 void jubuQuanJu();
+void arrayy();
+void pointZhiZhen();
+void yinYong();
 
 // 变量声明
 extern int a, b;
@@ -36,16 +39,17 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
     cout << LENGTH << NEWLINE <<LH;
-
-    countt = 5;
-    write_extern();
+//    countt = 5;
+//    write_extern();
     
     
+    pointZhiZhen();
+    yinYong();
+//    arrayy();
+//    jubuQuanJu();
+    //    bianLiangSm();
+    //    dataType();
     
-     jubuQuanJu();
-//    bianLiangSm();
-//    dataType();
-      
     return 0;
 }
 
@@ -56,7 +60,6 @@ int main(int argc, const char * argv[]) {
 void jubuQuanJu() {
     int g = 10;
     cout << g;
-    
     
 }
 
@@ -76,6 +79,86 @@ void bianLiangSm() {
     
     
 }
+
+/**
+ 数组
+ */
+void arrayy(){
+//    在 C++ 中要声明一个数组，需要指定元素的类型和元素的数量，如下所示：
+    int n[10];
+    for (int i = 0; i < 10; i++) {
+        n[i] = i + 100;
+    }
+    double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+    
+}
+
+
+/**
+ *指针
+ *
+ */
+//什么是指针？
+//指针是一个变量，其值为另一个变量的地址，即，内存位置的直接地址。就像其他变量或常量一样，您必须在使用指针存储其他变量地址之前，对其进行声明。指针变量声明的一般形式为：
+void pointZhiZhen(){
+    int  var = 20;   // 实际变量的声明
+    int  *ip;        // 指针变量的声明
+    ip = &var;       // 在指针变量中存储 var 的地址
+    cout << "Value of var variable: ";
+    cout << var << endl;
+    
+    // 输出在指针变量中存储的地址
+    cout << "Address stored in ip variable: ";
+    cout << ip << endl;
+    
+    // 访问指针中地址的值
+    cout << "Value of *ip variable: ";
+    cout << *ip << endl;
+}
+
+/**
+ * 引用
+ */
+//引用变量是一个别名, 也就是说, 它是某个已存在变量的另一个名字. 一旦把引用初始化为某个变量, 就可以使用该引用名称或变量名称来指向变量
+//C++ 引用 vs 指针
+//引用很容易与指针混淆，它们之间有三个主要的不同：
+//
+//不存在空引用。引用必须连接到一块合法的内存。
+//一旦引用被初始化为一个对象，就不能被指向到另一个对象。指针可以在任何时候指向到另一个对象。
+//引用必须在创建时被初始化。指针可以在任何时间被初始化
+void yinYong() {
+    int m = 55;
+    int& r = m;
+    int n = 111;
+    r = n;
+    
+    cout << "ww" << r <<"\n" << m;
+    cout << "-----" << &r << &n << &m;
+    
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  *数据类型
