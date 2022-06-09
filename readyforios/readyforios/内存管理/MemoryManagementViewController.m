@@ -21,6 +21,22 @@
     self.test = @"dfd";
     self.view.backgroundColor = [UIColor whiteColor];
     
+   
+    dispatch_async(dispatch_get_main_queue(), ^{
+     
+            for (int i = 0; i < 1000000; i ++) {
+                @autoreleasepool {
+                    NSString *string = @"Abc";
+                    string = [string lowercaseString];
+                    // string = [string stringByAppendingString:@"xyz"];
+                    string = [string stringByAppendingFormat:@"xyz"];
+                    NSLog(@"%d-%@", i, string);
+                }
+  
+            }
+        
+    });
+
     [self sss];
     
     // Do any additional setup after loading the view.

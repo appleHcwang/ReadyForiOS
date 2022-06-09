@@ -32,6 +32,7 @@
 		84A4813F284F4A3A005670FF /* IFLYMedCollLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A4813E284F4A3A005670FF /* IFLYMedCollLabelCell.xib */; };
 		84AC4C2D28475A0200FA553A /* IFLYCollTypeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC4C2C28475A0200FA553A /* IFLYCollTypeSelectView.swift */; };
 		84AC4C2F28476EBD00FA553A /* IFLYPatCollLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC4C2E28476EBD00FA553A /* IFLYPatCollLabelCell.xib */; };
+		84ADC6202850A15A008E1B37 /* webViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ADC61F2850A15A008E1B37 /* webViewViewController.m */; };
 		84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */; };
 		84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94FD727D5ABF100757059 /* GCDViewController.m */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,9 @@
 		84A4813E284F4A3A005670FF /* IFLYMedCollLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IFLYMedCollLabelCell.xib; sourceTree = "<group>"; };
 		84AC4C2C28475A0200FA553A /* IFLYCollTypeSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFLYCollTypeSelectView.swift; sourceTree = "<group>"; };
 		84AC4C2E28476EBD00FA553A /* IFLYPatCollLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IFLYPatCollLabelCell.xib; sourceTree = "<group>"; };
+		84ADC61E2850A15A008E1B37 /* webViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = webViewViewController.h; sourceTree = "<group>"; };
+		84ADC61F2850A15A008E1B37 /* webViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webViewViewController.m; sourceTree = "<group>"; };
+		84AEC8942851E429006F9948 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84B845EF27F1A2D400D4BEE7 /* RuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
 		84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
 		84B845F427F1B26800D4BEE7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 			children = (
 				8442B502284DA86B005D5E0A /* MemoryManagementViewController.h */,
 				8442B503284DA86B005D5E0A /* MemoryManagementViewController.m */,
+				84AEC8942851E429006F9948 /* README.md */,
 			);
 			path = "内存管理";
 			sourceTree = "<group>";
@@ -237,6 +242,8 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
+				84AEC8932851CAD5006F9948 /* Cocopods */,
+				84ADC61D2850A127008E1B37 /* webview */,
 				8442B501284DA7AB005D5E0A /* 内存管理 */,
 				848088C027F5C19A00C052DC /* KVC */,
 				841C8FD627F2A9470081CB63 /* KVO */,
@@ -300,6 +307,22 @@
 				84A1AB8727A13337005B34E2 /* TestMessage.m */,
 			);
 			path = "消息解析过程";
+			sourceTree = "<group>";
+		};
+		84ADC61D2850A127008E1B37 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				84ADC61E2850A15A008E1B37 /* webViewViewController.h */,
+				84ADC61F2850A15A008E1B37 /* webViewViewController.m */,
+			);
+			path = webview;
+			sourceTree = "<group>";
+		};
+		84AEC8932851CAD5006F9948 /* Cocopods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cocopods;
 			sourceTree = "<group>";
 		};
 		84B845F227F1AFE100D4BEE7 /* LLVM */ = {
@@ -526,6 +549,7 @@
 				84360FE227F4487C00A73792 /* KVOViewController.m in Sources */,
 				84A1AB6127A13123005B34E2 /* main.m in Sources */,
 				84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */,
+				84ADC6202850A15A008E1B37 /* webViewViewController.m in Sources */,
 				843C4D6327E433150091D3EE /* TestSwift.swift in Sources */,
 				8457A62327A2921A00CC7C4C /* TestView.m in Sources */,
 				84A1AB5327A13121005B34E2 /* SceneDelegate.m in Sources */,

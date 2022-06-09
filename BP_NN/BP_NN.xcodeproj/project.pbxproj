@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84AEC8982851FCF1006F9948 /* NodeList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AEC8962851FCF1006F9948 /* NodeList.cpp */; };
 		B38025CC284E4FB00086EB56 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38025CB284E4FB00086EB56 /* main.cpp */; };
 		B38025D4284E53EA0086EB56 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38025D2284E53EA0086EB56 /* Person.cpp */; };
 		B38025D7284E54360086EB56 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38025D5284E54360086EB56 /* Box.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84AEC8962851FCF1006F9948 /* NodeList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeList.cpp; sourceTree = "<group>"; };
+		84AEC8972851FCF1006F9948 /* NodeList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NodeList.hpp; sourceTree = "<group>"; };
 		B38025C8284E4FB00086EB56 /* BP_NN */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BP_NN; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38025CB284E4FB00086EB56 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B38025D2284E53EA0086EB56 /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
@@ -44,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84AEC8952851FCCC006F9948 /* 双向链表 */ = {
+			isa = PBXGroup;
+			children = (
+				84AEC8962851FCF1006F9948 /* NodeList.cpp */,
+				84AEC8972851FCF1006F9948 /* NodeList.hpp */,
+			);
+			path = "双向链表";
+			sourceTree = "<group>";
+		};
 		B38025BF284E4FB00086EB56 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 		B38025CA284E4FB00086EB56 /* BP_NN */ = {
 			isa = PBXGroup;
 			children = (
+				84AEC8952851FCCC006F9948 /* 双向链表 */,
 				B38025CB284E4FB00086EB56 /* main.cpp */,
 				B38025D5284E54360086EB56 /* Box.cpp */,
 				B38025D6284E54360086EB56 /* Box.hpp */,
@@ -132,6 +145,7 @@
 				B38025D7284E54360086EB56 /* Box.cpp in Sources */,
 				B38025D4284E53EA0086EB56 /* Person.cpp in Sources */,
 				B38025CC284E4FB00086EB56 /* main.cpp in Sources */,
+				84AEC8982851FCF1006F9948 /* NodeList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

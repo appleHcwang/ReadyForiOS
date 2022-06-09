@@ -33,6 +33,33 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    func addLabel() {
+        var inputText:UITextField = UITextField();
+        let msgAlertCtr = UIAlertController.init(title: "", message: "输入标签名", preferredStyle: .alert)
+        let ok = UIAlertAction.init(title: "确定", style:.default) { (action:UIAlertAction) ->() in
+            //                if((inputText.text) == ""){
+            print("你输入的是：\(String(describing: inputText.text))")
+            
+            //                }
+        }
+        let cancel = UIAlertAction.init(title: "取消", style:.cancel) { (action:UIAlertAction) -> ()in
+            
+            print("取消输入")
+        }
+        msgAlertCtr.addAction(ok)
+        msgAlertCtr.addAction(cancel)
+        //添加textField输入框
+        msgAlertCtr.addTextField { (textField) in
+            //设置传入的textField为初始化UITextField
+            inputText = textField
+            inputText.placeholder = "输入数据"
+        }
+        //设置到当前视图
+        self.present(msgAlertCtr, animated: true, completion: nil)
+        
+    }
+    
+    // MARK: -UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 1
@@ -79,6 +106,9 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
+
+            
+            
             
         }
     }
@@ -95,6 +125,8 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
+     您可以使用在Swift中，您可以使用MARK, TODO OR FIXME
+     这些预处理器功能允许在源代码编辑器的功能下拉框中添加一些结构。
      */
     
 }
@@ -110,4 +142,13 @@ class IFLYMedCollLabelCell: UITableViewCell {
         bgView.layer.borderWidth = 0.5
         bgView.layer.borderColor = UIColor(red: 0.2, green: 0.6, blue: 0.6, alpha: 1).cgColor
     }
+}
+
+
+class IFLYLabelModel : NSObject {
+    var titile: String?
+    var id: String?
+       
+    
+    
 }

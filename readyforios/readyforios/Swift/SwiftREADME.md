@@ -90,4 +90,8 @@ willSet、didSet 和 get、set这两套方法只能二选一，全部实现会�
 所以如果你想在set和get里做一些操作，在swift中，得额外声明一个计算属性，重写它的set和get方法， 然后通过调用计算属性，来达到操作原属性的目的，但直接重写原属性的willSet，看起来更方便
 
 
+//https://www.jianshu.com/p/e7eeff77adcd 常见面试题 
+
+
+
 

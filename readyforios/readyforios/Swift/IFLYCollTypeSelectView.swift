@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import KakaJSON
+//import KakaJSON
 
 
 @objcMembers
