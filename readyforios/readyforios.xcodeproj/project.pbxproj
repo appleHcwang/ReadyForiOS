@@ -31,7 +31,6 @@
 		84A4813D284F3FC0005670FF /* IFLYCollLabelSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4813C284F3FC0005670FF /* IFLYCollLabelSetVC.swift */; };
 		84A4813F284F4A3A005670FF /* IFLYMedCollLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A4813E284F4A3A005670FF /* IFLYMedCollLabelCell.xib */; };
 		84AC4C2D28475A0200FA553A /* IFLYCollTypeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC4C2C28475A0200FA553A /* IFLYCollTypeSelectView.swift */; };
-		84AC4C2F28476EBD00FA553A /* IFLYPatCollLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC4C2E28476EBD00FA553A /* IFLYPatCollLabelCell.xib */; };
 		84ADC6202850A15A008E1B37 /* webViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ADC61F2850A15A008E1B37 /* webViewViewController.m */; };
 		84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */; };
 		84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94FD727D5ABF100757059 /* GCDViewController.m */; };
@@ -101,7 +100,6 @@
 		84A4813C284F3FC0005670FF /* IFLYCollLabelSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFLYCollLabelSetVC.swift; sourceTree = "<group>"; };
 		84A4813E284F4A3A005670FF /* IFLYMedCollLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IFLYMedCollLabelCell.xib; sourceTree = "<group>"; };
 		84AC4C2C28475A0200FA553A /* IFLYCollTypeSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFLYCollTypeSelectView.swift; sourceTree = "<group>"; };
-		84AC4C2E28476EBD00FA553A /* IFLYPatCollLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IFLYPatCollLabelCell.xib; sourceTree = "<group>"; };
 		84ADC61E2850A15A008E1B37 /* webViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = webViewViewController.h; sourceTree = "<group>"; };
 		84ADC61F2850A15A008E1B37 /* webViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webViewViewController.m; sourceTree = "<group>"; };
 		84AEC8942851E429006F9948 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				84AC4C2C28475A0200FA553A /* IFLYCollTypeSelectView.swift */,
 				84A4813C284F3FC0005670FF /* IFLYCollLabelSetVC.swift */,
 				84A4813E284F4A3A005670FF /* IFLYMedCollLabelCell.xib */,
-				84AC4C2E28476EBD00FA553A /* IFLYPatCollLabelCell.xib */,
 				843C4D6227E433150091D3EE /* TestSwift.swift */,
 				8447E2222806A7AF009D9B55 /* SwiftViewController.swift */,
 				843C4D6127E433150091D3EE /* readyforios-Bridging-Header.h */,
@@ -467,7 +464,6 @@
 				84A1AB5B27A13123005B34E2 /* Assets.xcassets in Resources */,
 				84987D3B27D886CA00F28A60 /* Runloop in Resources */,
 				84A1AB5927A13121005B34E2 /* Main.storyboard in Resources */,
-				84AC4C2F28476EBD00FA553A /* IFLYPatCollLabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

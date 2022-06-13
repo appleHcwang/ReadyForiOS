@@ -72,6 +72,17 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let labelCell:IFLYMedCollLabelCell? = (tableView.dequeueReusableCell(withIdentifier:IFLYCollLabelSetVC.cellIdent  , for: indexPath) as! IFLYMedCollLabelCell)
+        labelCell?.editBlock = {
+         
+            
+        }
+        
+        labelCell?.deleteBlock = {
+            
+            
+        }
+        
+        
         return labelCell!
     }
     
@@ -100,23 +111,23 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
         return v
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        UITableViewCell.EditingStyle.delete
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-
-            
-            
-            
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-        
-        return "删除"
-    }
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        UITableViewCell.EditingStyle.delete
+//    }
+//
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+//
+//
+//
+//
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+//
+//        return "删除"
+//    }
     /*
      // MARK: - Navigation
      
@@ -134,13 +145,34 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
 
 
 class IFLYMedCollLabelCell: UITableViewCell {
+    typealias DeleteBlock = () -> ()
+    typealias EditBlock = () -> ()
+    var deleteBlock:DeleteBlock?
+    var editBlock:EditBlock?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var editBtn: UIButton!
     override func awakeFromNib() {
         bgView.layer.cornerRadius = 4
         bgView.layer.borderWidth = 0.5
         bgView.layer.borderColor = UIColor(red: 0.2, green: 0.6, blue: 0.6, alpha: 1).cgColor
+    }
+    
+    
+    @IBAction func editClick(_ sender: Any) {
+        
+        if  editBlock != nil {
+            editBlock!()
+        }
+    }
+    
+    
+    
+    @IBAction func deleteClick(_ sender: Any) {
+        if deleteBlock != nil {
+           deleteBlock!()
+        }
     }
 }
 
@@ -152,3 +184,18 @@ class IFLYLabelModel : NSObject {
     
     
 }
+
+
+/**
+ //为没有参数也没有返回值的闭包类型起一个别名
+   typealias Nothing = () -> ()
+    
+ //如果闭包的没有返回值，那么我们还可以这样写，
+   typealias Anything = () -> Void
+    
+ //为接受一个Int类型的参数不返回任何值的闭包类型 定义一个别名：PrintNumber
+   typealias PrintNumber = (Int) -> ()
+    
+ //为接受两个Int类型的参数并且返回一个Int类型的值的闭包类型 定义一个别名：Add
+   typealias Add = (Int, Int) -> (Int)
+ */

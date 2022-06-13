@@ -27,15 +27,15 @@
     [super viewDidLoad];
     self.title = @"fsfs";
 //    IFLYCollTypeSelectView * view = [[IFLYCollTypeSelectView alloc] initWithFrame:self.view.bounds];
-//    view.dataArr = @[];
+//    view.dataArr= @[];
 ////    [view setDataSourceWithArr:@[@"1",@"2",@"3",@"5"]];
 //    [self.view addSubview:view];
-//
+
 //    TestSwift *ss = [[TestSwift alloc] init];
 //    ss.now = @"fdfd";
     
 
-   self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.IFLYCollLabelSetVC",@"BlockViewController",@"MemoryManagementViewController",nil];
+   self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.IFLYCollLabelSetVC",@"BlockViewController",@"MemoryManagementViewController",@"GCDViewController",nil];
 //    /******类方法调用******/
 ////    [[TestMessage class] performSelector:@selector(testClassFunction)];
 ////    CALayer *aa = [[CALayer alloc] init];

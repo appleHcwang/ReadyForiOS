@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,23 +26,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-AI-Yr9">
-                                <rect key="frame" x="381" y="31.5" width="15" height="15"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-am-SIh">
+                                <rect key="frame" x="369" y="24" width="30" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="65g-BX-lbo"/>
-                                    <constraint firstAttribute="height" constant="15" id="pqS-IT-wKE"/>
+                                    <constraint firstAttribute="width" constant="30" id="QZY-iy-JAd"/>
+                                    <constraint firstAttribute="height" constant="30" id="pxN-5O-9z7"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="deleteClick:" destination="bPm-gD-roD" eventType="touchUpInside" id="EPX-af-JK8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-AI-Yr9">
+                                <rect key="frame" x="327" y="24" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="editClick:" destination="bPm-gD-roD" eventType="touchUpInside" id="Kns-JK-ZKV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GoT-7e-JZE" firstAttribute="centerY" secondItem="Y86-pU-m9x" secondAttribute="centerY" id="00f-Je-ANO"/>
+                            <constraint firstItem="tLi-am-SIh" firstAttribute="width" secondItem="ITg-AI-Yr9" secondAttribute="width" id="3NJ-Uw-YWQ"/>
+                            <constraint firstItem="tLi-am-SIh" firstAttribute="leading" secondItem="ITg-AI-Yr9" secondAttribute="trailing" constant="12" id="9cN-v4-fzr"/>
+                            <constraint firstItem="tLi-am-SIh" firstAttribute="height" secondItem="ITg-AI-Yr9" secondAttribute="height" id="NSV-C1-Za7"/>
+                            <constraint firstItem="tLi-am-SIh" firstAttribute="centerY" secondItem="ITg-AI-Yr9" secondAttribute="centerY" id="bFo-Nb-Ycn"/>
                             <constraint firstItem="GoT-7e-JZE" firstAttribute="leading" secondItem="Y86-pU-m9x" secondAttribute="leading" constant="26" id="ecB-bp-Dd9"/>
-                            <constraint firstItem="ITg-AI-Yr9" firstAttribute="centerY" secondItem="Y86-pU-m9x" secondAttribute="centerY" id="nDI-Kv-dhg"/>
-                            <constraint firstAttribute="trailing" secondItem="ITg-AI-Yr9" secondAttribute="trailing" constant="18" id="vx2-y6-VbU"/>
+                            <constraint firstAttribute="trailing" secondItem="tLi-am-SIh" secondAttribute="trailing" constant="15" id="f1c-Bn-LVb"/>
+                            <constraint firstItem="tLi-am-SIh" firstAttribute="centerY" secondItem="Y86-pU-m9x" secondAttribute="centerY" id="ql5-9T-337"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -54,10 +71,16 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="bgView" destination="Y86-pU-m9x" id="ENT-Yp-u75"/>
+                <outlet property="deleteBtn" destination="tLi-am-SIh" id="R9w-9a-9wf"/>
                 <outlet property="editBtn" destination="ITg-AI-Yr9" id="oMa-vQ-Y2o"/>
                 <outlet property="titleLabel" destination="GoT-7e-JZE" id="ad5-j3-PXB"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="91.071428571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
