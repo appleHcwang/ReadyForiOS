@@ -15,8 +15,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
-    [self testXhL];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (int i = 0; i<1000; i++) {
+            NSLog(@"%d",i);
+        }
+    });
+
+    NSLog(@"PPPPPP");
+    
+//    [self testXhL];
     // Do any additional setup after loading the view.
 }
 

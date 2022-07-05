@@ -11,13 +11,18 @@ import SnapKit
 //import RxSwift
 //import KakaJSON
 
-
+@objc enum ShowViewType: Int {
+    case collectSuccess = 0 //收藏成功 没有标签
+    case collectSucHaveLabel = 1 //收藏成功有标签
+    case collectHaveLabel // 收藏修改标签
+}
 @objcMembers
 class IFLYCollTypeSelectView: UIView,  UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout {
     static var cellIdent:String? = "IFLYPatCollLabelCell"
+    var showType:ShowViewType = ShowViewType.collectSuccess
     var bjView:UIView?
     var showView:UIView?
-    var tipLb:UILabel?
+//    var tipLb:UILabel?
     lazy  var selecTableV:UITableView = {
         let  tableV = UITableView.init(frame: CGRect.init(x:0 , y: 0, width: 0, height: 0), style: UITableView.Style.plain)
 //        tableV.delegate = self
@@ -27,65 +32,92 @@ class IFLYCollTypeSelectView: UIView,  UICollectionViewDelegate, UICollectionVie
         
     }()
     
+    //懒加载
     lazy var selectCollV:UICollectionView = {
         //设置布局
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = UICollectionView.ScrollDirection.vertical
-        
-        
-        
         let  colV = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         colV.backgroundColor = UIColor.white
         colV.delegate = self
         colV.dataSource = self
     
         colV.register(IFLYPatCollLbCell.self, forCellWithReuseIdentifier: IFLYCollTypeSelectView.cellIdent!)
+        showView?.addSubview(colV)
         return colV
         
     }()
+    
+    
+    //懒加载
+    lazy var tipLb:UILabel = {
+        let Lb:UILabel = UILabel.init()
+        Lb.text = "请为该患者选择一个标签:"
+        Lb.font = UIFont.systemFont(ofSize: 14)
+        Lb.textColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
+        Lb.numberOfLines = 0
+        Lb.sizeToFit()
+        showView?.addSubview(Lb)
+       return Lb
+    }()
+    
+    lazy var qdBtn:UIButton = {
+        let dBtn: UIButton  = UIButton.init(type: UIButton.ButtonType.custom)
+        dBtn.setTitle("确定", for: UIControl.State.normal)
+        dBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        dBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        dBtn.addTarget(self, action: #selector(qdClick), for: UIControl.Event.touchUpInside)
+        dBtn.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.6, alpha: 1)
+        dBtn.layer.masksToBounds = true
+        dBtn.layer.cornerRadius = 24
+        showView?.addSubview(dBtn)
+        return dBtn
+    }()
+    
     
     var dataArr:Array<Any>? {
         willSet {
             
         }
         didSet {
-            if (dataArr?.count ?? 0) > 0 {
-                showView?.addSubview(selectCollV)
-                selectCollV.snp.makeConstraints({ make in
-                    make.top.equalTo(tipLb!.snp_bottom).offset(0)
-                    make.left.right.equalTo(showView!).offset(0)
-                    make.bottom.equalTo(showView!.snp_bottom).offset(-88)
-                })
-                selectCollV.reloadData()
-            } else {
-                showView?.snp.updateConstraints({ make in
-                    make.height.equalTo(258)
-                })
-                
-                tipLb?.numberOfLines = 2
-       
-                tipLb?.text = "您可以去设置收藏标签管理患者，或直接在收藏中查看"
-                tipLb?.snp.makeConstraints({ make in
-                    make.top.equalToSuperview().offset(110)
-                    make.centerX.equalTo(showView!.snp.centerX)
-                   
-                })
-                
-                creatBottomUI()
-                
-            }
+//            if (dataArr?.count ?? 0) > 0 {
+//                showView?.addSubview(selectCollV)
+//                selectCollV.snp.makeConstraints({ make in
+//                    make.top.equalTo(tipLb!.snp_bottom).offset(0)
+//                    make.left.right.equalTo(showView!).offset(0)
+//                    make.bottom.equalTo(showView!.snp_bottom).offset(-88)
+//                })
+//                selectCollV.reloadData()
+//            } else {
+//                showView?.snp.updateConstraints({ make in
+//                    make.height.equalTo(258)
+//                })
+//
+//                tipLb?.numberOfLines = 2
+//
+//                tipLb?.text = "您可以去设置收藏标签管理患者，或直接在收藏中查看"
+//                tipLb?.snp.makeConstraints({ make in
+//                    make.top.equalToSuperview().offset(110)
+//                    make.centerX.equalTo(showView!.snp.centerX)
+//
+//                })
+//
+//                creatBottomUI()
+//
+//            }
             
         }
     }
     
     
-    override init(frame: CGRect) {
+    init(frame: CGRect,showType:ShowViewType) {
         super.init(frame: frame)
-    
+        self.showType = showType
         setupSubViews()
      
     }
-    
+
+        
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -110,77 +142,142 @@ class IFLYCollTypeSelectView: UIView,  UICollectionViewDelegate, UICollectionVie
             make.center.equalTo(self.center)
             make.height.equalTo(360)
         })
-        
         let titleV:UIView? = UIView.init()
-        titleV?.backgroundColor = UIColor.yellow
-        showView?.addSubview(titleV!)
         
-        titleV?.snp.makeConstraints({ make in
-            make.height.equalTo(50)
-            make.top.equalToSuperview()
-            make.left.equalTo(showView!).offset(90)
-            make.right.equalTo(showView!).offset(-90)
-        })
-        
-        let leftImV:UIImageView = UIImageView.init()
-        leftImV.backgroundColor = UIColor.red
-        titleV?.addSubview(leftImV)
-        
-        leftImV.snp.makeConstraints({ make in
-            make.height.width.equalTo(50)
-            //            make.left.equalTo(self).offset(15)
-            make.left.equalTo(titleV!).offset(0)
-            make.centerY.equalTo(titleV!)
-        })
-        
-        
-        let titleLb:UILabel? = UILabel.init()
-        titleLb?.text = "收藏成功"
-        titleV?.addSubview(titleLb!)
-        
-        titleLb?.snp.makeConstraints({ make in
-            make.height.equalTo(50)
-            //            make.left.equalTo(self).offset(15)
-            make.right.equalTo(titleV!).offset(0)
-            make.centerY.equalTo(titleV!)
-        })
-        
-        tipLb = UILabel.init()
-        tipLb?.text = "请为该患者选择一个标签:"
-        tipLb?.font = UIFont.systemFont(ofSize: 14)
-        tipLb?.textColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
-        showView?.addSubview(tipLb!)
-        tipLb?.snp.makeConstraints({ make in
-            make.top.equalTo(titleV!.snp_bottom).offset(20)
-//            make.centerX.equalTo(showView!.snp.centerX)
-            make.left.equalTo(showView!).offset(16)
+     
+        if showType == ShowViewType.collectSuccess || showType == ShowViewType.collectSucHaveLabel {
+            //头部//
+            //        let titleV:UIView? = UIView.init()
+            titleV?.backgroundColor = UIColor.yellow
+            showView?.addSubview(titleV!)
             
-        })
+            titleV?.snp.makeConstraints({ make in
+                make.height.equalTo(50)
+                make.top.equalToSuperview()
+                make.left.equalTo(showView!).offset(90)
+                make.right.equalTo(showView!).offset(-90)
+            })
+            
+            let leftImV:UIImageView = UIImageView.init()
+            leftImV.backgroundColor = UIColor.red
+            titleV?.addSubview(leftImV)
+            
+            leftImV.snp.makeConstraints({ make in
+                make.height.width.equalTo(50)
+                //            make.left.equalTo(self).offset(15)
+                make.left.equalTo(titleV!).offset(0)
+                make.centerY.equalTo(titleV!)
+            })
+            
+            
+            let titleLb:UILabel? = UILabel.init()
+            titleLb?.text = "收藏成功"
+            titleV?.addSubview(titleLb!)
+            
+            titleLb?.snp.makeConstraints({ make in
+                make.height.equalTo(50)
+                //            make.left.equalTo(self).offset(15)
+                make.right.equalTo(titleV!).offset(0)
+                make.centerY.equalTo(titleV!)
+            })
+            if showType == ShowViewType.collectSuccess {
+                showView?.snp.updateConstraints({ make in
+                    make.height.equalTo(258)
+                })
+//                tipLb.numberOfLines = 2
+                tipLb.text = "您可以去设置收藏标签管理患者，或直接在收藏中查看"
+                tipLb.snp.makeConstraints({ make in
+                    make.top.equalToSuperview().offset(110)
+                    make.centerX.equalTo(showView!.snp.centerX)
+                    make.width.equalTo(242)
+                   
+                })
+                creatBottomUI()
+            } else {
+                tipLb.text = "请为该患者选择一个标签:"
+                tipLb.snp.makeConstraints({ make in
+                    make.top.equalTo(titleV!.snp_bottom).offset(20)
+                    make.left.equalTo(showView!).offset(16)
+                    
+                })
+                showView?.addSubview(selectCollV)
+                selectCollV.snp.makeConstraints({ make in
+                    make.top.equalTo(tipLb.snp_bottom).offset(0)
+                    make.left.right.equalTo(showView!).offset(0)
+                    make.bottom.equalTo(showView!.snp_bottom).offset(-88)
+                })
+                selectCollV.reloadData()
+                
+                qdBtn.snp.makeConstraints { make in
+                    make.bottom.equalTo(showView!.snp.bottom).offset(-20)
+                    make.left.equalTo(showView!).offset(16)
+                    make.right.equalTo(showView!).offset(-16)
+                    make.height.equalTo(50)
+                }
+                
+            }
+            
+            //头部//
+        } else if showType == ShowViewType.collectHaveLabel {
         
-        let qdBtn: UIButton  = UIButton.init(type: UIButton.ButtonType.custom)
-        qdBtn.setTitle("确定", for: UIControl.State.normal)
-        qdBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
-        qdBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        qdBtn.addTarget(self, action: #selector(qdClick), for: UIControl.Event.touchUpInside)
-        qdBtn.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.6, alpha: 1)
-        qdBtn.layer.masksToBounds = true
-        qdBtn.layer.cornerRadius = 24
-        
-        showView?.addSubview(qdBtn)
-        qdBtn.snp.makeConstraints { make in
-            make.bottom.equalTo(showView!.snp.bottom).offset(-20)
-            make.left.equalTo(showView!).offset(16)
-            make.right.equalTo(showView!).offset(-16)
-            make.height.equalTo(50)
-
+            
+            let closeBtn:UIButton! = UIButton.init(type: UIButton.ButtonType.custom)
+            showView?.addSubview(closeBtn)
+            closeBtn.backgroundColor = UIColor.red
+            closeBtn.snp.makeConstraints { make in
+                make.width.height.equalTo(30)
+                make.right.equalTo(showView!).offset(-17)
+                make.top.equalTo(showView!).offset(17)
+            }
+            
+            tipLb.text = "请为该患者选择一个标签:"
+            tipLb.snp.makeConstraints({ make in
+                make.top.equalTo(showView!).offset(43)
+                make.left.equalTo(showView!).offset(16)
+                
+            })
+            
+            
+            selectCollV.snp.makeConstraints({ make in
+                make.top.equalTo(tipLb.snp_bottom).offset(0)
+                make.left.right.equalTo(showView!).offset(0)
+                make.bottom.equalTo(showView!.snp_bottom).offset(-88)
+            })
+            selectCollV.reloadData()
+            
+            qdBtn.snp.makeConstraints { make in
+                make.bottom.equalTo(showView!.snp.bottom).offset(-20)
+                make.left.equalTo(showView!).offset(16)
+                make.right.equalTo(showView!).offset(-16)
+                make.height.equalTo(50)
+            }
+            
+            
         }
         
         
-//        self.dataArr = ["ss"]
-//        for item in 1...100 {
-//            let str = String(item)
-//            self.dataArr?.append(str )
-//        }
+//        tipLb = UILabel.init()
+//        tipLb?.text = "请为该患者选择一个标签:"
+//        tipLb?.font = UIFont.systemFont(ofSize: 14)
+//        tipLb?.textColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
+//        showView?.addSubview(tipLb!)
+//        tipLb?.snp.makeConstraints({ make in
+//            if showType != ShowViewType.collectHaveLabel {
+//                make.top.equalTo(titleV!.snp_bottom).offset(20)
+//            } else {
+//                make.top.equalTo(showView!).offset(43)
+//            }
+//            make.left.equalTo(showView!).offset(16)
+//
+//        })
+//        let qdBtn: UIButton  = UIButton.init(type: UIButton.ButtonType.custom)
+//        qdBtn.setTitle("确定", for: UIControl.State.normal)
+//        qdBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+//        qdBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+//        qdBtn.addTarget(self, action: #selector(qdClick), for: UIControl.Event.touchUpInside)
+//        qdBtn.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.6, alpha: 1)
+//        qdBtn.layer.masksToBounds = true
+//        qdBtn.layer.cornerRadius = 24
         
     }
     
@@ -270,7 +367,7 @@ class IFLYCollTypeSelectView: UIView,  UICollectionViewDelegate, UICollectionVie
     
         let patCollLabelCell:IFLYPatCollLbCell? = collectionView.dequeueReusableCell(withReuseIdentifier: IFLYCollTypeSelectView.cellIdent!, for: indexPath) as? IFLYPatCollLbCell
         patCollLabelCell?.titleLb.text = "快治愈患者快治愈患者快治愈患者快治愈患"
-        patCollLabelCell?.setUIData(data: dataArr![indexPath.row])
+//        patCollLabelCell?.setUIData(data: dataArr![indexPath.row])
         
         return patCollLabelCell!
         

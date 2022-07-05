@@ -110,6 +110,7 @@
 		84C9078427EAFA15006DC125 /* RuntimeREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RuntimeREADME.md; sourceTree = "<group>"; };
 		84D94FD627D5ABF100757059 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		84D94FD727D5ABF100757059 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		84E6332C2869AC5D00EF2874 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBAF95B272F59ADF0E8FAB01 /* Pods-readyforios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-readyforios.release.xcconfig"; path = "Target Support Files/Pods-readyforios/Pods-readyforios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +343,7 @@
 			children = (
 				84D94FD627D5ABF100757059 /* GCDViewController.h */,
 				84D94FD727D5ABF100757059 /* GCDViewController.m */,
+				84E6332C2869AC5D00EF2874 /* README.md */,
 			);
 			path = GCD;
 			sourceTree = "<group>";

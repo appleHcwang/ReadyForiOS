@@ -30,7 +30,10 @@
 
 -(void)methDy {
     TestMessage * mag = [[TestMessage alloc]init];
-    [mag performSelector:@selector(eat)];
+  
+   [mag performSelector:@selector(eat)];
+//    [TestMessage drink];
+
 }
 
 

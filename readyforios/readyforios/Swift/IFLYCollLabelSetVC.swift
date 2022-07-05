@@ -7,6 +7,9 @@
 
 import UIKit
 
+// 定义枚举
+
+
 class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     static var cellIdent:String! = "IFLYMedCollLabelCell"
     lazy var listView:UITableView = {
@@ -22,14 +25,32 @@ class IFLYCollLabelSetVC: UIViewController, UITableViewDelegate, UITableViewData
         return tableVw
     }()
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "新增标签"
+      
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(listView)
         listView.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
         }
+        
+        
+        let cc = ViewController.init()
+        
+        cc.posttUrlsuccess { (aa) -> () in
+            
+            print(aa as! String + "dfd")
+            
+            
+        } fail: { (bb) -> () in
+            
+            
+            
+        }
+
     }
     
     

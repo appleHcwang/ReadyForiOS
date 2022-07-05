@@ -17,8 +17,8 @@
     
 }
 @property (nonatomic,strong) TestMessage* test;
-@property (nonatomic,strong) UITableView * tableView;
-@property (nonatomic,strong) NSMutableArray *dataArray;
+
+
 @end
 
 @implementation ViewController
@@ -26,38 +26,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"fsfs";
-//    IFLYCollTypeSelectView * view = [[IFLYCollTypeSelectView alloc] initWithFrame:self.view.bounds];
-//    view.dataArr= @[];
-////    [view setDataSourceWithArr:@[@"1",@"2",@"3",@"5"]];
-//    [self.view addSubview:view];
-
-//    TestSwift *ss = [[TestSwift alloc] init];
-//    ss.now = @"fdfd";
-    
-
-   self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.IFLYCollLabelSetVC",@"BlockViewController",@"MemoryManagementViewController",@"GCDViewController",nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.IFLYCollLabelSetVC",@"BlockViewController",@"MemoryManagementViewController",@"GCDViewController",@"webViewViewController",nil];
 //    /******类方法调用******/
-////    [[TestMessage class] performSelector:@selector(testClassFunction)];
-////    CALayer *aa = [[CALayer alloc] init];
-//    // Do any additional setup after loading the view.
 
-//    TestView * testV = [[TestView alloc] init];
-//    testV.frame = CGRectMake(100, 100, 200, 200);
-//    testV.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:testV];
+   [self creatTableView];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+////        for (int i = 0; i < 10000000000; i++) {
+////           NSLog(@"___%d",i);
+////        }
+//        NSLog(@"AAAAAAAAA");
+//    });
 //
 //
-//    UIView * greenV = [[UIView alloc] init];
-//    greenV.frame = CGRectMake(0, 0, 50, 50);
-//    greenV.backgroundColor = [UIColor greenColor];
-//    [testV addSubview:greenV];
 //
-//    UIView * yellowV = [[UIView alloc] init];
-//    yellowV.frame = CGRectMake(50, 50, 50, 50);
-//    yellowV.backgroundColor = [UIColor yellowColor];
-//    [testV addSubview:yellowV];
-////
-    [self creatTableView];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSLog(@"BBBBBBB");
+//    });
+//    NSLog(@"CCCCCCCCCCC");
+    
+ 
 }
 
 - (void)creatTableView {
@@ -70,9 +57,6 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
-    
-    NSArray * a = [NSArray arrayWithObjects:[SwiftViewController optionalTypeWithA:@"11" b:@"sds"], nil];
-    
 }
 
 #pragma mark - Table view data source
@@ -105,8 +89,11 @@
     
 //    Class aa =  NSClassFromString(self.dataArray[indexPath.row]);
     
- 
-    [self.navigationController pushViewController:[[NSClassFromString(self.dataArray[indexPath.row]) alloc] init] animated:YES];
+    UIViewController * vc = [[NSClassFromString(self.dataArray[indexPath.row]) alloc] init];
+    
+    
+    
+    [self.navigationController pushViewController:vc animated:YES];
  
 }
 
@@ -118,6 +105,17 @@
 
  
 
-
+-(void)posttUrlsuccess:(ResponseSuccess)success fail:(ResponseFail)fail {
+    
+    if (success) {
+        success(@"cccccc");
+    }
+    
+    if (fail) {
+        fail(NSError.new);
+    }
+    
+    
+}
  
 @end

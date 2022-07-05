@@ -11,6 +11,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestMessage : NSObject
 
+
+
++ (void)drink;
 @end
 
+
+@interface help : NSObject
+
+- (void)eat;
+
+@end
 NS_ASSUME_NONNULL_END
