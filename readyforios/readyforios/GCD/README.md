@@ -29,3 +29,38 @@ GCD核心概念：「任务」、「队列」
 并发队列：(Concurrent Dispatch Queue)
 - 可以让多个任务并发（同时）执行。（可以开启多个线程，并且同时执行任务）
 - ⚠️并发队列的「并发」功能只有在异步(dispatch_async)方法下才有效
+
+
+
+#线程锁
+- NSLock
+NSLock 遵循 NSLocking 协议，lock 方法是加锁，unlock 是解锁，tryLock 是尝试加锁，如果失败的话返回 NO，lockBeforeDate: 是在指定 Date 之前尝试加锁，如果在指定时间之前都不能加锁，则返回 NO。
+- NSContionLock (条件锁)
+NSConditionLock 和 NSLock 类似，都遵循 NSLocking 协议，方法都类似，只是多了一个 condition 属性，以及每个操作都多了一个关于 condition 属性的方法，例如 tryLock，tryLockWhenCondition:，NSConditionLock 可以称为条件锁，只有 condition 参数与初始化时候的 condition 相等，lock 才能正确进行加锁操作。而 unlockWithCondition: 并不是当 Condition 符合条件时才解锁，而是解锁之后，修改 Condition 的值。
+
+- NSRecursiveLock(递归锁)
+NSRecursiveLock 是递归锁，他和 NSLock 的区别在于，NSRecursiveLock 可以在一个线程中重复加锁（反正单线程内任务是按顺序执行的，不会出现资源竞争问题），NSRecursiveLock 会记录上锁和解锁的次数，当二者平衡的时候，才会释放锁，其它线程才可以上锁成功。
+
+- Synchronized(self) {// code 同步锁}
+@synchronized(object) 指令使用的 object 为该锁的唯一标识，只有当标识相同时，才满足互斥。
+
+@synchronized(object) 简化了加锁的行为，我们不在需要显示的加锁。
+
+-- 自旋锁 - OSSpinLock
+自旋锁是一种 “忙等” 的锁，它适用于轻量访问，譬如在 引用计数表 和 原子性atomic。
+
+如果当前线程的 锁 被其他线程获取,当前线程会不断探测 锁 是否有被释放，如果检测出释放，会第一时间获取这个锁
+是一种用于保护多线程共享资源的锁，与一般互斥锁（mutex）不同之处在于当自旋锁尝试获取锁时以忙等待（busy waiting）的形式不断地循环检查锁是否可用。当上一个线程的任务没有执行完毕的时候（被锁住），那么下一个线程会一直等待（不会睡眠），当上一个线程的任务执行完毕，下一个线程会立即执行。
+在多CPU的环境中，对持有锁较短的程序来说，使用自旋锁代替一般的互斥锁往往能够提高程序的性能。
+优点
+自旋锁不会引起调用者睡眠，所以不会进行线程调度，CPU时间片轮转等耗时操作。所有如果能在很短的时间内获得锁，自旋锁的效率远高于互斥锁。
+缺点
+自旋锁一直占用CPU，他在未获得锁的情况下，一直运行－－自旋，所以占用着CPU，如果不能在很短的时间内获得锁，这无疑会使CPU效率降低。
+
+小结
+效率高，但是耗费资源，不能实现递归调用。
+
+-- 互斥锁 - os_unfair_lock
+当上一个线程的任务没有执行完毕的时候（被锁住），那么下一个线程会进入睡眠状态等待任务执行完毕，当上一个线程的任务执行完毕，下一个线程会自动唤醒然后执行任务。
+
+
