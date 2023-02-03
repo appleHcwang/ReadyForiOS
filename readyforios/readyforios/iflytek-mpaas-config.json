@@ -1,0 +1,10 @@
+{
+    "version": "0.5",
+    "config": {
+        "server": "http://172.30.91.177:9090",
+        "productId": "47635c749b3962a03cb5a227c267a6bf",
+        "bundleId": "iflyMedical.readyforios",
+        "rsaSecret": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCII2NjasohIv+QWe4AHULJ59/SzFXccSP5BvS5lJhVbYSuV102pq7qhA6GHuVa8TTRzef6e9JSWyTTMXYKiXXyXFZ/+oP62mKXF/28sxRa0CnYjQOgLVZbxboLJeQds8XQqv32YHjHQdzeKqhXEYu2fRIw4PaKgNnLApWLto4APwIDAQAB",
+        "statisticServer": "http://172.30.91.177:9420"
+    }
+}

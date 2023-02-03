@@ -6,12 +6,13 @@
 //
 
 #import "MemoryManagementViewController.h"
-
+#import "TestMessage.h"
 @interface MemoryManagementViewController ()
 {
     
 }
 @property(nonatomic,weak) NSString * test;
+@property (nonatomic,strong) TestMessage* testObj;
 
 @property (nonatomic,copy)void(^myBlock)(MemoryManagementViewController *v);
 @end
@@ -32,12 +33,32 @@
     int count =10;
     self.myBlock(self);
     
-    
+[self logAdrress];
 //    NSString *str = @"lu";
 //    NSLog(@"内存地址：%p - 指针地址：%p",str, &str);
 //
     
     // Do any additional setup after loading the view.
+}
+
+
+
+-(void)logAdrress {
+    
+self.testObj = [[TestMessage alloc] init];
+//    self.testObj = aa;
+    self.testObj = nil;
+    NSLog(@"**********测试%@",self.test);
+  
+    // 打印引用计数
+    NSLog(@"retain  count = %ld\n",CFGetRetainCount((__bridge  CFTypeRef)(_testObj)));
+
+    
+    NSString *str = @"lu";
+    NSLog(@"内存地址：%p - 指针地址：%p",self.testObj, &(_testObj));
+
+
+    
 }
 
 -(void)sss {

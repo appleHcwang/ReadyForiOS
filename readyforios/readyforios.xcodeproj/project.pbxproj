@@ -3,18 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3781862DB93BF3BA01105539 /* Pods_readyforios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E26CD2696AA9404A47A27A /* Pods_readyforios.framework */; };
+		840296D329585A0A0044A323 /* SwiftCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840296D229585A0A0044A323 /* SwiftCode.swift */; };
 		84360FE227F4487C00A73792 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84360FE127F4487C00A73792 /* KVOViewController.m */; };
 		843C4D6327E433150091D3EE /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4D6227E433150091D3EE /* TestSwift.swift */; };
 		843C6DF4280D08C600A8614E /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C6DF3280D08C600A8614E /* BlockViewController.m */; };
 		8442B504284DA86B005D5E0A /* MemoryManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B503284DA86B005D5E0A /* MemoryManagementViewController.m */; };
 		8447E2232806A7AF009D9B55 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447E2222806A7AF009D9B55 /* SwiftViewController.swift */; };
+		84501B1028E6800A0029E86C /* iflytek-mpaas-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 84501B0F28E6800A0029E86C /* iflytek-mpaas-config.json */; };
+		84501B1328E68AEF0029E86C /* IFLYMPAppCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501B1228E68AEF0029E86C /* IFLYMPAppCenterController.m */; };
+		8454917B298A544200DC494B /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 84549177298A544000DC494B /* favicon.ico */; };
+		8454917C298A544200DC494B /* js in Resources */ = {isa = PBXBuildFile; fileRef = 84549178298A544100DC494B /* js */; };
+		8454917D298A544200DC494B /* css in Resources */ = {isa = PBXBuildFile; fileRef = 84549179298A544100DC494B /* css */; };
+		8454917E298A544200DC494B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 8454917A298A544200DC494B /* index.html */; };
 		8457A62327A2921A00CC7C4C /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457A62227A2921A00CC7C4C /* TestView.m */; };
 		84645547280D5C0500E7D248 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84645546280D5C0500E7D248 /* TestClass.m */; };
+		846648B528E5833400762572 /* IFLYMPaaS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846648B328E582F200762572 /* IFLYMPaaS.framework */; platformFilter = ios; settings = {ATTRIBUTES = (Weak, ); }; };
+		846648B628E5833400762572 /* IFLYMPaaS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 846648B328E582F200762572 /* IFLYMPaaS.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		848088C327F5C1B900C052DC /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848088C227F5C1B900C052DC /* KVCViewController.m */; };
 		84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84987D3827D8868100F28A60 /* RunloopViewController.m */; };
 		84987D3B27D886CA00F28A60 /* Runloop in Resources */ = {isa = PBXBuildFile; fileRef = 84987D3A27D886CA00F28A60 /* Runloop */; };
@@ -34,6 +43,7 @@
 		84ADC6202850A15A008E1B37 /* webViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ADC61F2850A15A008E1B37 /* webViewViewController.m */; };
 		84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */; };
 		84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94FD727D5ABF100757059 /* GCDViewController.m */; };
+		84F96D4428D041F000115920 /* JSAndSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F96D4328D041F000115920 /* JSAndSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +63,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		846648B728E5833400762572 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				846648B628E5833400762572 /* IFLYMPaaS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		208914C7CC249B1905DB14E2 /* Pods-readyforios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-readyforios.debug.xcconfig"; path = "Target Support Files/Pods-readyforios/Pods-readyforios.debug.xcconfig"; sourceTree = "<group>"; };
 		54E26CD2696AA9404A47A27A /* Pods_readyforios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_readyforios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840296D229585A0A0044A323 /* SwiftCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCode.swift; sourceTree = "<group>"; };
 		841C8FD727F2ABA30081CB63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		841DA1FF27EC5DFF00305FFD /* BlockREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BlockREADME.md; sourceTree = "<group>"; };
 		84360FE027F4487C00A73792 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
@@ -67,10 +92,18 @@
 		8442B502284DA86B005D5E0A /* MemoryManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManagementViewController.h; sourceTree = "<group>"; };
 		8442B503284DA86B005D5E0A /* MemoryManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManagementViewController.m; sourceTree = "<group>"; };
 		8447E2222806A7AF009D9B55 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		84501B0F28E6800A0029E86C /* iflytek-mpaas-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iflytek-mpaas-config.json"; sourceTree = "<group>"; };
+		84501B1128E68AEF0029E86C /* IFLYMPAppCenterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFLYMPAppCenterController.h; sourceTree = "<group>"; };
+		84501B1228E68AEF0029E86C /* IFLYMPAppCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFLYMPAppCenterController.m; sourceTree = "<group>"; };
+		84549177298A544000DC494B /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		84549178298A544100DC494B /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		84549179298A544100DC494B /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		8454917A298A544200DC494B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		8457A62127A2921A00CC7C4C /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		8457A62227A2921A00CC7C4C /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		84645545280D5C0500E7D248 /* TestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		84645546280D5C0500E7D248 /* TestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+		846648B328E582F200762572 /* IFLYMPaaS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IFLYMPaaS.framework; sourceTree = "<group>"; };
 		848088C127F5C1B900C052DC /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
 		848088C227F5C1B900C052DC /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		848088C427F5C1CE00C052DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -110,7 +143,9 @@
 		84C9078427EAFA15006DC125 /* RuntimeREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RuntimeREADME.md; sourceTree = "<group>"; };
 		84D94FD627D5ABF100757059 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		84D94FD727D5ABF100757059 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		84D99D16296D433C00E49F02 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84E6332C2869AC5D00EF2874 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84F96D4328D041F000115920 /* JSAndSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSAndSwift.swift; sourceTree = "<group>"; };
 		CBAF95B272F59ADF0E8FAB01 /* Pods-readyforios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-readyforios.release.xcconfig"; path = "Target Support Files/Pods-readyforios/Pods-readyforios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3781862DB93BF3BA01105539 /* Pods_readyforios.framework in Frameworks */,
+				846648B528E5833400762572 /* IFLYMPaaS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +231,25 @@
 			path = "内存管理";
 			sourceTree = "<group>";
 		};
+		84549174298A52F800DC494B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				84549179298A544100DC494B /* css */,
+				84549177298A544000DC494B /* favicon.ico */,
+				8454917A298A544200DC494B /* index.html */,
+				84549178298A544100DC494B /* js */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		846979C828F16A78008BDB87 /* 常见算法 */ = {
+			isa = PBXGroup;
+			children = (
+				840296D229585A0A0044A323 /* SwiftCode.swift */,
+			);
+			path = "常见算法";
+			sourceTree = "<group>";
+		};
 		848088C027F5C19A00C052DC /* KVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +295,9 @@
 		84A1AB4D27A13121005B34E2 /* readyforios */ = {
 			isa = PBXGroup;
 			children = (
+				84549174298A52F800DC494B /* Resource */,
+				84D99D15296D3B9700E49F02 /* 蓝牙 */,
+				846979C828F16A78008BDB87 /* 常见算法 */,
 				84AEC8932851CAD5006F9948 /* Cocopods */,
 				84ADC61D2850A127008E1B37 /* webview */,
 				8442B501284DA7AB005D5E0A /* 内存管理 */,
@@ -256,7 +314,10 @@
 				84A1AB4F27A13121005B34E2 /* AppDelegate.m */,
 				84A1AB5127A13121005B34E2 /* SceneDelegate.h */,
 				84A1AB5227A13121005B34E2 /* SceneDelegate.m */,
+				84501B1128E68AEF0029E86C /* IFLYMPAppCenterController.h */,
+				84501B1228E68AEF0029E86C /* IFLYMPAppCenterController.m */,
 				84A1AB5427A13121005B34E2 /* ViewController.h */,
+				84501B0F28E6800A0029E86C /* iflytek-mpaas-config.json */,
 				84A1AB5527A13121005B34E2 /* ViewController.m */,
 				8457A62127A2921A00CC7C4C /* TestView.h */,
 				8457A62227A2921A00CC7C4C /* TestView.m */,
@@ -310,6 +371,7 @@
 		84ADC61D2850A127008E1B37 /* webview */ = {
 			isa = PBXGroup;
 			children = (
+				84F96D4328D041F000115920 /* JSAndSwift.swift */,
 				84ADC61E2850A15A008E1B37 /* webViewViewController.h */,
 				84ADC61F2850A15A008E1B37 /* webViewViewController.m */,
 			);
@@ -348,9 +410,18 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		84D99D15296D3B9700E49F02 /* 蓝牙 */ = {
+			isa = PBXGroup;
+			children = (
+				84D99D16296D433C00E49F02 /* README.md */,
+			);
+			path = "蓝牙";
+			sourceTree = "<group>";
+		};
 		F963190A75CD84A56284B8ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				846648B328E582F200762572 /* IFLYMPaaS.framework */,
 				54E26CD2696AA9404A47A27A /* Pods_readyforios.framework */,
 			);
 			name = Frameworks;
@@ -368,6 +439,7 @@
 				84A1AB4827A13121005B34E2 /* Frameworks */,
 				84A1AB4927A13121005B34E2 /* Resources */,
 				3152CD6CE2909D752E2CDFF8 /* [CP] Embed Pods Frameworks */,
+				846648B728E5833400762572 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -461,7 +533,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8454917D298A544200DC494B /* css in Resources */,
+				8454917E298A544200DC494B /* index.html in Resources */,
 				84A1AB5E27A13123005B34E2 /* LaunchScreen.storyboard in Resources */,
+				8454917C298A544200DC494B /* js in Resources */,
+				84501B1028E6800A0029E86C /* iflytek-mpaas-config.json in Resources */,
+				8454917B298A544200DC494B /* favicon.ico in Resources */,
 				84A4813F284F4A3A005670FF /* IFLYMedCollLabelCell.xib in Resources */,
 				84A1AB5B27A13123005B34E2 /* Assets.xcassets in Resources */,
 				84987D3B27D886CA00F28A60 /* Runloop in Resources */,
@@ -535,6 +612,7 @@
 				84645547280D5C0500E7D248 /* TestClass.m in Sources */,
 				84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */,
 				84AC4C2D28475A0200FA553A /* IFLYCollTypeSelectView.swift in Sources */,
+				84501B1328E68AEF0029E86C /* IFLYMPAppCenterController.m in Sources */,
 				848088C327F5C1B900C052DC /* KVCViewController.m in Sources */,
 				84A4813D284F3FC0005670FF /* IFLYCollLabelSetVC.swift in Sources */,
 				84A1AB5627A13121005B34E2 /* ViewController.m in Sources */,
@@ -544,10 +622,12 @@
 				84A1AB5027A13121005B34E2 /* AppDelegate.m in Sources */,
 				8442B504284DA86B005D5E0A /* MemoryManagementViewController.m in Sources */,
 				8447E2232806A7AF009D9B55 /* SwiftViewController.swift in Sources */,
+				84F96D4428D041F000115920 /* JSAndSwift.swift in Sources */,
 				84360FE227F4487C00A73792 /* KVOViewController.m in Sources */,
 				84A1AB6127A13123005B34E2 /* main.m in Sources */,
 				84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */,
 				84ADC6202850A15A008E1B37 /* webViewViewController.m in Sources */,
+				840296D329585A0A0044A323 /* SwiftCode.swift in Sources */,
 				843C4D6327E433150091D3EE /* TestSwift.swift in Sources */,
 				8457A62327A2921A00CC7C4C /* TestView.m in Sources */,
 				84A1AB5327A13121005B34E2 /* SceneDelegate.m in Sources */,
@@ -725,12 +805,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1111;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/readyforios/Framework/ios-arm64_i386_x86_64-simulator",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/readyforios/ios",
+				);
 				INFOPLIST_FILE = readyforios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iflyMedical.readyforios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "readyforios/Swift/readyforios-Bridging-Header.h";
@@ -748,12 +836,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1111;
 				DEVELOPMENT_TEAM = EH5L6T78SH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/readyforios/Framework/ios-arm64_i386_x86_64-simulator",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/readyforios/ios",
+				);
 				INFOPLIST_FILE = readyforios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iflyMedical.readyforios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "readyforios/Swift/readyforios-Bridging-Header.h";

@@ -20,18 +20,27 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"runloop";
     
-    CFRunLoopRef runLoopRef = CFRunLoopGetMain();
-    CFArrayRef modes =  CFRunLoopCopyAllModes(runLoopRef);
-    NSLog(@"MainRunLoop中的modes:%@",modes);
-    NSLog(@"MainRunLoop对象：%@",runLoopRef);
+//    CFRunLoopRef runLoopRef = CFRunLoopGetMain();
+//    CFArrayRef modes =  CFRunLoopCopyAllModes(runLoopRef);
+//    NSLog(@"MainRunLoop中的modes:%@",modes);
+//    NSLog(@"MainRunLoop对象：%@",runLoopRef);
     
-    
-
-
-
+    NSLog(@"%s",__func__);
+    NSLog(@"111");
+    NSString *animal = [[NSString alloc] init] ;
+    NSLog(@"222");
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__func__);
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__func__);
+}
+ 
+ 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 

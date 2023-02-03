@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkyysclient"]=self["webpackChunkyysclient"]||[]).push([[545],{7545:function(n,e,t){t.r(e),t.d(e,{default:function(){return i}});var r=t(3396);function u(n,e,t,u,a,c){return(0,r.wg)(),(0,r.iD)("div",null," 柱状图 ")}var a={data(){return{name:"张雪"}},mounted(){},methods:{}},c=t(89);const s=(0,c.Z)(a,[["render",u]]);var i=s}}]);
+//# sourceMappingURL=545.d6966433.js.map

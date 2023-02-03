@@ -1,4 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://git.iflytek.com/STC_mPaaS/mpaas-specs.git'
+
 platform :ios, '9.0'
 use_frameworks!
 
@@ -18,6 +20,7 @@ target ’readyforios’ do
   pod 'RxDataSources', '~> 3.0'  # RxSwift中用于设置UITableView/UICollectionView data sources
   pod 'ZKProgressHUD'
   pod 'JDStatusBarNotification'
-  pod 'KakaJSON', '~> 1.1.2' 
+  pod 'KakaJSON', '~> 1.1.2'
+  pod 'iFlyMPaaS'
 end
 

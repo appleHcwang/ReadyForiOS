@@ -1,0 +1,6 @@
+framework module IFLYMPaaS {
+  umbrella header "IFLYMPaaS-umbrella.h"
+
+  export *
+  module * { export * }
+}

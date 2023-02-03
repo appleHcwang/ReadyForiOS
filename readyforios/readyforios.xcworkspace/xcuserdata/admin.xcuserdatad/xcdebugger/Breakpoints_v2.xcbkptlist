@@ -82,6 +82,38 @@
             endingLineNumber = "46"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EE449B78-DBBC-4743-B253-93B48A7CF3C8 - d0022eb49cff5c87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "readyforios.IFLYCollLabelSetVC.viewDidLoad() -&gt; ()"
+                  moduleName = "readyforios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/Work/%E5%AE%A2%E6%88%B7%E7%AB%AF/ReadyForiOS(github)/readyforios/readyforios/Swift/IFLYCollLabelSetVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  uuid = "EE449B78-DBBC-4743-B253-93B48A7CF3C8 - 9fdae01fa7ac59c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Any&gt;) -&gt; () in readyforios.IFLYCollLabelSetVC.viewDidLoad() -&gt; ()"
+                  moduleName = "readyforios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/Work/%E5%AE%A2%E6%88%B7%E7%AB%AF/ReadyForiOS(github)/readyforios/readyforios/Swift/IFLYCollLabelSetVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -119,96 +151,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD4CD794-FB1E-4638-A3E5-62020A04A162"
+            uuid = "992C5C82-3745-41CF-AD1E-8DC0D67F1AA9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "readyforios/Runtime/&#x6d88;&#x606f;&#x89e3;&#x6790;&#x8fc7;&#x7a0b;/TestMessage.m"
+            filePath = "readyforios/webview/webViewViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "+resolveClassMethod:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8670D429-94D5-4B1F-9AC0-FB2879137D28"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "readyforios/Runtime/&#x6d88;&#x606f;&#x89e3;&#x6790;&#x8fc7;&#x7a0b;/TestMessage.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "+resolveInstanceMethod:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14D8FDC5-8F40-4A78-AD80-C3BB9B36F017"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "readyforios/Runtime/&#x6d88;&#x606f;&#x89e3;&#x6790;&#x8fc7;&#x7a0b;/TestMessage.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "+resolveClassMethod:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5BC8835F-EAB3-47D7-9A75-5A4F0B3B2E7F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "readyforios/Runtime/&#x6d88;&#x606f;&#x89e3;&#x6790;&#x8fc7;&#x7a0b;/TestMessage.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "+resolveInstanceMethod:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F8E59815-0C4E-4FE9-BAE7-B84EA945ED78"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "readyforios/Runtime/&#x6d88;&#x606f;&#x89e3;&#x6790;&#x8fc7;&#x7a0b;/TestMessage.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-forwardingTargetForSelector:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "507F2221-BB4E-4381-96C4-D59170BD7F8D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "readyforios/Runtime/&#x6d88;&#x606f;&#x89e3;&#x6790;&#x8fc7;&#x7a0b;/TestMessage.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-forwardingTargetForSelector:"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-initWKWebView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

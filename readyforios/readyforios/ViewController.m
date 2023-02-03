@@ -26,7 +26,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"fsfs";
-    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.IFLYCollLabelSetVC",@"BlockViewController",@"MemoryManagementViewController",@"GCDViewController",@"webViewViewController",nil];
+      
+  //reversedString
+    
+    NSLog(@"%@",[SwiftCode reversedString:@"Hello"]);
+ 
+    self.dataArray = [NSMutableArray arrayWithObjects:@"RunloopViewController",@"RuntimeViewController",@"KVOViewController",@"KVCViewController",@"readyforios.IFLYCollLabelSetVC",@"BlockViewController",@"MemoryManagementViewController",@"GCDViewController",@"readyforios.JSAndSwift",@"webViewViewController",nil];
 //    /******类方法调用******/
 
    [self creatTableView];
@@ -45,6 +50,8 @@
 //    NSLog(@"CCCCCCCCCCC");
     
  
+    
+    
 }
 
 - (void)creatTableView {
@@ -79,6 +86,7 @@
     }
  
     cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.adjustsFontForContentSizeCategory = YES;
 
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
