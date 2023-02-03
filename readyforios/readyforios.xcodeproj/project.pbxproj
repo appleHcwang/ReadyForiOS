@@ -44,6 +44,7 @@
 		84B845F127F1A2D400D4BEE7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B845F027F1A2D400D4BEE7 /* RuntimeViewController.m */; };
 		84D94FD827D5ABF100757059 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94FD727D5ABF100757059 /* GCDViewController.m */; };
 		84F96D4428D041F000115920 /* JSAndSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F96D4328D041F000115920 /* JSAndSwift.swift */; };
+		84FF0776298D002000C48548 /* MyThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF0775298D002000C48548 /* MyThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		84D99D16296D433C00E49F02 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84E6332C2869AC5D00EF2874 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84F96D4328D041F000115920 /* JSAndSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSAndSwift.swift; sourceTree = "<group>"; };
+		84FF0774298D002000C48548 /* MyThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyThread.h; sourceTree = "<group>"; };
+		84FF0775298D002000C48548 /* MyThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyThread.m; sourceTree = "<group>"; };
 		CBAF95B272F59ADF0E8FAB01 /* Pods-readyforios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-readyforios.release.xcconfig"; path = "Target Support Files/Pods-readyforios/Pods-readyforios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +269,8 @@
 				84987D3727D8868100F28A60 /* RunloopViewController.h */,
 				84987D3827D8868100F28A60 /* RunloopViewController.m */,
 				84987D3A27D886CA00F28A60 /* Runloop */,
+				84FF0774298D002000C48548 /* MyThread.h */,
+				84FF0775298D002000C48548 /* MyThread.m */,
 			);
 			path = Runloop;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FF0776298D002000C48548 /* MyThread.m in Sources */,
 				84645547280D5C0500E7D248 /* TestClass.m in Sources */,
 				84987D3927D8868100F28A60 /* RunloopViewController.m in Sources */,
 				84AC4C2D28475A0200FA553A /* IFLYCollTypeSelectView.swift in Sources */,

@@ -14,5 +14,10 @@ Runloop相关知识点
 5. GSEventReceiveRunLoopMode：接受系统内部事件，通常用不到
 
 
+三 .autoreleasepool 释放对象的两个时刻
+1. autoreleasepool向NSRunLoop注册了observer回调，那么runloop休眠或者退出时，清理池子
+2. autoreleasepool执行到[pool release]时，里面的对象执行[obj release]并回收池子
+
+
 源码相关的。
 https://toutiao.io/posts/kd15sr/preview

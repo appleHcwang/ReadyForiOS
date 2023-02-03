@@ -6,6 +6,7 @@
 //
 
 #import "RunloopViewController.h"
+#import "MyThread.h"
 
 @interface RunloopViewController ()
 {
@@ -17,6 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MyThread *thread =[[MyThread alloc] initWithTarget:self selector:@selector(run) object:nil];
+    [thread start];
+    
+    
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"runloop";
     
@@ -25,10 +32,10 @@
 //    NSLog(@"MainRunLoop中的modes:%@",modes);
 //    NSLog(@"MainRunLoop对象：%@",runLoopRef);
     
-    NSLog(@"%s",__func__);
-    NSLog(@"111");
-    NSString *animal = [[NSString alloc] init] ;
-    NSLog(@"222");
+//    NSLog(@"%s",__func__);
+//    NSLog(@"111");
+//    NSString *animal = [[NSString alloc] init] ;
+//    NSLog(@"222");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,9 +48,21 @@
 }
  
  
+-(void)run {
+    NSLog(@"%s  %@",__func__,[NSThread currentThread]);
+    
+    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init]  forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] run];
+   
+    
+    NSLog(@"-------end--------");
+    
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-
+    NSLog(@"%s",__func__);
+    CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
 /*
